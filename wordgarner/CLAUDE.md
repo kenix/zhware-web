@@ -124,7 +124,7 @@ suffix and a trailing slash works.
 | Privacy policy URL (Apple, Google) | `https://zhware.org/wordgarner/privacy/` |
 | Support URL (Apple) | `https://zhware.org/wordgarner/support/` |
 | Marketing URL (Apple, optional) | `https://zhware.org/wordgarner/` |
-| Contact email (Google) | `wordgarner.support@zhware.org` |
+| Contact email (Google) | `app.support@zhware.org` |
 | EULA (Apple, optional) | `https://zhware.org/wordgarner/terms/` |
 
 **Both stores' data answers change the moment the hosted engine is enabled
@@ -211,5 +211,5 @@ The claims that would break first:
 
 - The app: `apps/wordgarner`. Its Settings ▸ About links here, and its
   support tile opens `/wordgarner/support/`.
-- The support address is `wordgarner.support@zhware.org`. It appears on this
-  site and in `apps/wordgarner/tools/feedback_endpoint.gs`.
+- The support address is `app.support@zhware.org`, shared by every zhware
+  app. It appears on this site and as `AppConfig.supportEmail` in the app.

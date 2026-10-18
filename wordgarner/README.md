@@ -49,11 +49,11 @@ The whole site is one GitHub Pages deployment; see the root `README.md`.
 ## The report form
 
 `/wordgarner/report/` posts to [Web3Forms](https://web3forms.com/), which emails it on
-to `wordgarner.support@zhware.org`. GitHub Pages cannot run anything itself,
+to `app.support@zhware.org`. GitHub Pages cannot run anything itself,
 so the form needs an off-site endpoint.
 
 Register the access key once at <https://web3forms.com/> with
-`wordgarner.support@zhware.org` and the website `https://zhware.org/wordgarner/support/`,
+`app.support@zhware.org` and the website `https://zhware.org/wordgarner/support/`,
 then paste the key into the `access_key` hidden field in `report/index.html`.
 The key is public by design — it only says which mailbox to deliver to.
 
@@ -78,7 +78,7 @@ rely on them:
 | Privacy policy URL (Apple, Google) | `https://zhware.org/wordgarner/privacy/` |
 | Support URL (Apple) | `https://zhware.org/wordgarner/support/` |
 | Marketing URL (Apple, optional) | `https://zhware.org/wordgarner/` |
-| Contact email (Google) | `wordgarner.support@zhware.org` |
+| Contact email (Google) | `app.support@zhware.org` |
 | EULA (Apple, optional) | `https://zhware.org/wordgarner/terms/` |
 
 ## Before submitting

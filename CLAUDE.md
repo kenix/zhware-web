@@ -30,6 +30,13 @@ The static site for every zhware app, one GitHub Pages deployment at
   footer says so. Never link a font network or a CDN from here.
 - **No shared stylesheet.** Each app has its own styling, fonts and icons in
   its own folder. Only the root page is neutral.
+- **What every app folder shares, and nothing more:** the paths `/<app>/`,
+  `/<app>/support/` and `/<app>/privacy/` (terms, a report form or more are
+  the app's own choice); the contact `app.support@zhware.org`; a footer on
+  every page whose `© 2026 zhware` links to `/`; and a last-updated date on
+  the privacy page. Structure, wording and languages stay per app: Trail
+  Trove is English and German because its audience is Swiss, Word Garner is
+  English only.
 - **Every link inside an app folder is root-relative with the app prefix**
   (`/wordgarner/privacy/`), including CSS `url()`. A bare `/privacy/` would
   point at nothing.
