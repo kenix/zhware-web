@@ -17,18 +17,20 @@ GitHub account: `kenix`. DNS: Spaceship. Mail: whatever already serves
    of `wordgarner/report/index.html`, and of any later app's form. It is
    public by design. Each form's hidden `subject` field says which app
    a message came from. Word Garner's says `Word Garner report`.
-3. **Retire `wordgarner.support@zhware.org`** (decided 2026-10-18, no
-   forward). Before deleting the mailbox, move everything that still sends to
-   it:
+3. **Retire `wordgarner.support@zhware.org`**, but not yet (decided
+   2026-10-18, no forward). Build 5 is the approved build and is being
+   released as it is. It shows `wordgarner.support@` in Settings, so that
+   mailbox has to keep receiving until 1.0.1 (step 15) is live and
+   build 5 is no longer the current version. Meanwhile, move everything that
+   does not ship inside a binary:
    - In `svcs/lexis/fly.toml`, `LEXIS_REPORT_TO` (the daily report and the ceiling
-     alert) is already `dev.support@zhware.org`; create that mailbox, then
-     `fly deploy`.
-   - The old Web3Forms key (step 2 replaces it).
+     alert) is `dev.support@zhware.org`. Done and deployed 2026-10-18.
+   - The Web3Forms key is renamed `support-zhware`, bound to `app.support@`.
+     Done.
    - The Google consent screen's support email, if it was ever set (step 14).
    - Any App Store Connect contact that uses it.
 
-   Delete the mailbox after the step 15 submission has gone through, so a
-   reviewer's mail can't bounce in the meantime.
+   Delete the mailbox only after 1.0.1 has been released.
 
 ## B. GitHub repository
 
@@ -132,20 +134,28 @@ GitHub account: `kenix`. DNS: Spaceship. Mail: whatever already serves
       under IAM, sign in as it, and pick it. Otherwise keep your own address.
     - **Developer contact information:** `app.support@zhware.org` (any
       address works here).
-15. **App Store Connect, Word Garner 1.0:**
-    1. On the 1.0 version page, **Developer Reject** the approved build. The
-       version becomes editable again.
-    2. **App Privacy ▸ Privacy Policy URL:**
-       `https://zhware.org/wordgarner/privacy/`.
-    3. On the version page, set the **Support URL** to
+15. **App Store Connect, Word Garner:**
+    1. **Release build 5** (the approved review) as it is. It carries the old
+       URLs (`wordgarner.zhware.org`), `wordgarner.support@` and
+       `webcredentials:wordgarner.zhware.org`, so the old site, its AASA and
+       the old mailbox must stay up for as long as build 5 is the current
+       version. Do not do step 17 before 1.0.1 is live.
+    2. **Prepare 1.0.1 for review.** The aligned build is `d431620` and
+       later (it also carries iCloud sync, which build 5 lacks). Release
+       1.0.0 closes the version number, so in `pubspec.yaml` set
+       `version: 1.0.1+15`, build and upload as
+       `apps/wordgarner/docs/app-store-release.md` describes, and add a new
+       version 1.0.1 in App Store Connect. The build already carries the new
+       URLs, `app.support@` and `webcredentials:zhware.org`.
+    3. On the 1.0.1 page, set the **Support URL** to
        `https://zhware.org/wordgarner/support/` and the **Marketing URL** to
-       `https://zhware.org/wordgarner/`. Optionally, set the App Review contact
-       email to `app.support@`.
-    4. Raise the build number in `pubspec.yaml`, build and upload as
-       `apps/wordgarner/docs/app-store-release.md` describes, pick the new
-       build, and **Submit for Review**. The build already carries the new
-       URLs and `webcredentials:zhware.org` (commit `d431620`). Submit only
-       after step 12 passes, because Review opens these pages.
+       `https://zhware.org/wordgarner/`. **App Privacy ▸ Privacy Policy URL**
+       (it applies to every version): `https://zhware.org/wordgarner/privacy/`.
+       Optionally, set the App Review contact email to `app.support@`.
+       Change the privacy URL only after step 12 passes, so the live version
+       never points at a page that is not up.
+    4. **Submit for Review** only after step 12 passes, because Review opens
+       these pages. Release 1.0.1 once it is approved.
     5. On the next sign-up on a device, check that iOS offers a strong password.
        That proves the AASA works.
 16. **Google Play** (when the listing exists): **Store settings ▸ Store
@@ -155,10 +165,10 @@ GitHub account: `kenix`. DNS: Spaceship. Mail: whatever already serves
 
 ## F. Afterwards
 
-17. **Turn `wordgarner.zhware.org` into redirects.** Replace the
-    `wordgarner-web` pages with stubs that send each path to
+17. **Turn `wordgarner.zhware.org` into redirects**, once 1.0.1 is live.
+    Replace the `wordgarner-web` pages with stubs that send each path to
     `https://zhware.org/wordgarner/...`, and keep its AASA for builds already
-    installed. That is a push, so it needs your approval. Keep its DNS record
+    installed (build 5 stays on devices for a long time). That is a push, so it needs your approval. Keep its DNS record
     for months.
 18. **When Word Garner is released:** on the home page, swap its *Coming
     soon* tag for the App Store link.
