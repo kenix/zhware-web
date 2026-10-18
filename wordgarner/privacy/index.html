@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Word Garner</title>
+<meta name="description" content="Word Garner's privacy policy. No account needed, no tracking; your vocabulary stays on your phone, and in your own iCloud only if you turn sync on.">
+<link rel="canonical" href="https://zhware.org/wordgarner/privacy/">
+<link rel="icon" href="/wordgarner/favicon.ico?v=2" sizes="32x32">
+<link rel="icon" href="/wordgarner/favicon.svg?v=2" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/wordgarner/apple-touch-icon.png?v=2">
+<link rel="stylesheet" href="/wordgarner/assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/wordgarner/"><img class="mark" src="/wordgarner/icon.svg?v=2" alt="" width="64" height="64">Word Garner</a>
+    <nav class="site">
+      <a href="/wordgarner/">Home</a>
+      <a href="/wordgarner/support/">Support</a>
+      <a href="/wordgarner/privacy/" aria-current="page">Privacy</a>
+      <a href="/wordgarner/terms/">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h1>Privacy policy</h1>
+  <p class="updated">Last updated 10 October 2026. Applies to the Word Garner
+    mobile app (<code>org.zhware.wordgarner</code>) for iOS and Android, and to
+    this website.</p>
+
+  <div class="panel">
+    <p><strong>The short version.</strong> Word Garner works with no account
+      at all, and that is the ordinary way to use it. Your vocabulary, your
+      settings and your backups live on your phone. There is no advertising
+      or tracking, and no analytics in the app. Words are translated on the phone itself. Three
+      things can ever leave your device, and you ask for each of them: text
+      you asked Lexis, Word Garner’s own small service, about — only if you
+      sign in; a dictionary file you chose to download, which is public
+      data and carries nothing about you; and your vocabulary, to <em>your
+      own</em> iCloud — only if you turn on iCloud sync, and never to
+      us. <strong>If you never sign in, we store nothing about
+      you whatsoever.</strong> If you do, we store an anonymous identifier
+      and how many requests it made today — and, if you signed up with an
+      email address rather than Apple or Google, a one-way hash of that
+      address and of your password — and you can delete all of it from
+      Settings.</p>
+  </div>
+
+  <h2>Who is responsible</h2>
+  <p>
+    Word Garner is made by zhware, an individual developer. Questions about this
+    policy: <a href="mailto:wordgarner.support@zhware.org">wordgarner.support@zhware.org</a>.
+  </p>
+
+  <h2>What Word Garner stores, and where</h2>
+  <p>
+    Everything below is stored on your device, in the app’s own private
+    storage — and, only if you turn on <a href="#icloud">iCloud sync</a>, in
+    your own iCloud as well. None of it is transmitted to us, because there is
+    nowhere to transmit it to.
+  </p>
+  <ul>
+    <li><strong>Your vocabulary</strong> — the words, phrases and sentences you
+      capture, their translations, pronunciations, explanations and example
+      sentences, the source you noted, and any tags and notes you add.</li>
+    <li><strong>Your revision history</strong> — how often each word has been
+      quizzed, how often you got it right, and when you last looked at it.</li>
+    <li><strong>Your settings</strong> — the languages you study, the interface
+      language, theme, reminder time and similar preferences.</li>
+    <li><strong>Backups</strong> — the app writes periodic exports of your
+      vocabulary (JSON, compressed) into its own documents folder on the
+      device. They are uploaded nowhere unless you turn on <em>Back up to
+      iCloud Drive</em>, described <a href="#icloud">below</a>.</li>
+    <li><strong>Your sign-in</strong>, if you sign in — a session token held
+      in the iOS Keychain or the Android encrypted preference store. Earlier
+      versions of the app could hold an API key of yours there; the current
+      version deletes any such key the first time it starts.</li>
+  </ul>
+  <p>
+    Word Garner does not collect your name, email address, phone number, contacts,
+    photos, location, advertising identifier or device identifier. The one
+    exception is an email address you choose to sign up with, described
+    <a href="#hosted">below</a>. It contains
+    no analytics, crash-reporting or advertising SDK.
+  </p>
+
+  <h2>What leaves your device, and when</h2>
+
+  <h3>On-device translation (the default)</h3>
+  <p>
+    Word Garner translates on the device first, using the translation engine
+    built into your operating system. That engine may download language models
+    from the platform vendor (Apple or Google) the first time a language pair
+    is used; after that it works offline. This is handled by the operating
+    system, not by Word Garner, and the text you translate is processed on the
+    device.
+  </p>
+
+  <h3 id="hosted">Lexis, Word Garner’s own service (only if you sign in)</h3>
+  <p>
+    Pronunciations, explanations and example sentences, and a translation the
+    device could not make, come from Lexis, Word Garner’s own service, if you
+    sign in and ask for them. There is no other way to them: the app no
+    longer takes an API key of your own. This is <strong>optional</strong>, you
+    are asked about it once — at the moment you tap something that needs it —
+    and declining leaves every other part of the app exactly as it was.
+    Capturing, translating on the device, dictionary packs, the quiz, search,
+    statistics, export and backup all work with no account at all, and always
+    will.
+  </p>
+  <p><strong>What the service is sent.</strong> Only when you ask it for
+    something, and only what that question needs:</p>
+  <ul>
+    <li>the word, phrase or sentence the question is about — the text you
+      captured when it is being translated, and the translation itself when
+      you ask what it means, how it is said, or for an example;</li>
+    <li>the sentence you noted it came from, if any, as context;</li>
+    <li>the two language codes when translating, or the one when not;</li>
+    <li>what is already known about the word — its kind of word and gender,
+      from your dictionary, an earlier answer or your own choice — so the
+      reply can keep to it and leave it out;</li>
+    <li>which meaning of the word you mean, where you said or picked one —
+      a few words of your own, or the short label Lexis gave it — and, when
+      you ask for the list of meanings, the labels of the meanings you have
+      already saved for that word, so they come back under the same names.</li>
+  </ul>
+  <p>
+    <strong>Nothing is ever sent without a tap.</strong> Capturing a word does
+    not reach the service: a capture is translated, and an explanation, an
+    example or a pronunciation is bought only when you ask for it. Requests
+    are never queued for later — if you are offline, the app says so rather
+    than sending it when you next have signal.
+  </p>
+  <p><strong>Who else sees it.</strong> The service passes your question to
+    <strong>OpenAI</strong>, which is the sub-processor behind it, and returns
+    the answer. We send OpenAI the text above and nothing that identifies you:
+    no account, no address, no device identifier. OpenAI’s handling of API
+    traffic is governed by their own terms — at the time of writing they state
+    that API content is not used to train their models, and they retain it for
+    a limited period for abuse monitoring. Please read
+    <a href="https://openai.com/policies/">their policies</a> if that matters
+    to you. If we ever change provider, this page says so before the change
+    ships.</p>
+  <p><strong>Three ways to sign in.</strong> With Apple, with Google, or —
+    if you have neither or would rather not use them — with an email address
+    and a password of your own.</p>
+  <p><strong>What the service keeps about you.</strong> Deliberately almost
+    nothing, and there is no row anywhere with your name on it:</p>
+  <ul>
+    <li><strong>An anonymous identifier.</strong> Apple or Google gives us a
+      subject id when you sign in; we do not store it. We hash it together
+      with the provider’s name and keep only that hash, which is what counts
+      your daily allowance. It cannot be turned back into your account. An
+      email account gets a random identifier instead, hashed the same way.</li>
+    <li><strong>A number.</strong> How many answers that identifier has asked
+      for today, so the free allowance can be enforced. It expires on its own
+      after two days.</li>
+    <li><strong>With Apple or Google, your email address is not sent and not
+      stored.</strong> Apple or Google hands it to the <em>app</em> when you
+      first sign in, and it stays on your phone, in the Keychain, so Settings
+      can show who is signed in. The service never receives it. Apple’s
+      <em>Hide My Email</em> works normally, and makes no difference to us
+      either way. There is no password: your identity stays with Apple or
+      Google.</li>
+    <li><strong>With an email address, we keep a one-way hash of it, never
+      the address itself</strong> — it is what your account is looked up by
+      when you sign in. Your password is kept only as a salted
+      <a href="https://en.wikipedia.org/wiki/Argon2">Argon2id</a> hash, which
+      cannot be turned back into the password. The address does reach the
+      service each time you register, sign in or reset the password, because
+      that is how we know where to send the code; it is used for that and
+      not kept.</li>
+    <li><strong>Codes and attempt counters</strong>, while they matter. A
+      six-digit confirmation or reset code is valid for 15 minutes and then
+      gone. How many codes an address was sent today, and how many wrong
+      passwords or codes were tried, are counted so nobody can guess their
+      way in or use the form to flood someone’s inbox; each count expires on
+      its own within a day.</li>
+  </ul>
+  <p><strong>Who sends the emails.</strong> The confirmation and reset
+    emails are sent by <strong>Resend</strong>, a transactional email service
+    and the second sub-processor behind Word Garner’s service, from its EU
+    region. Resend receives the address the email goes to and the email itself
+    — the code and two sentences — and nothing else about you; see
+    <a href="https://resend.com/legal/privacy-policy">their privacy policy</a>.
+    Apple and Google sign-ins send no email and never reach Resend.</p>
+  <p><strong>What the service logs.</strong> One line per answer, carrying the
+    kind of question, the language codes, a one-way digest of the text, the
+    anonymous identifier, and what the request cost in tokens. <strong>The
+    text itself is never logged</strong> — the digest exists so we can count
+    how often the same word is asked about, which is the only thing we want
+    to know, and it cannot be read back into the word.</p>
+  <p><strong>Daily totals.</strong> The service also counts its day: how
+    many answers it gave and of what kind, how many accounts signed in and
+    how many were new, how many different words were asked about, how long
+    answers took and what they cost. These are totals that name nobody —
+    accounts and words are counted in a form that cannot be read back into
+    them — kept for four days and emailed to us once a day. Whether a
+    sign-in is a new account is checked against a running count of the same
+    kind, which is kept. No device is counted, because the service is never
+    told which device you use. <strong>On a day the service reaches its
+    spending limit</strong>, that email also names the five accounts that
+    asked the most, by the first four characters of their anonymous
+    identifier, so we can tell a fault from misuse.</p>
+  <p><strong>The spending limit.</strong> The service has a daily limit on
+    what it may spend, so a fault or misuse cannot run up costs. When it is
+    reached, Lexis pauses for everybody until midnight UTC, and Settings ▸
+    Translation says so. Translation on the phone carries on as normal.</p>
+  <p><strong>Deleting the account.</strong> Settings ▸ Account ▸ Delete
+    account. It removes the identifier and the counter, and revokes the Sign
+    in with Apple grant so Apple no longer lists Word Garner among your
+    sign-ins. You are asked to sign in once more to confirm, because revoking
+    requires it and because it is not a thing to do by accident. Your words,
+    translations, history and backups are on your phone and are not touched.
+    For Google there is no grant for us to revoke — we only ever verified a
+    token — so the app says so and points you at your Google account page if
+    you want to remove it there too. For an email account you are asked for
+    the password instead, and the hashed address and password are removed
+    with everything else, so the address can be used to register again.</p>
+  <p>
+    Signing out, in the same place, ends the session on that phone and leaves
+    the account alone.
+  </p>
+
+  <h3 id="icloud">iCloud sync and iCloud Drive backup (only if you turn them on)</h3>
+  <p>
+    On iPhone and iPad with iOS 17 or later, Settings ▸ Data ▸ <em>iCloud
+    sync</em> keeps your vocabulary the same on every device signed in to
+    your Apple ID. It is <strong>off by default</strong> and turned on per
+    device. With it off, nothing below happens.
+  </p>
+  <p><strong>What goes to iCloud.</strong> Each word with everything the app
+    holds about it — translations, pronunciations, explanations, examples,
+    notes, tags, the source you noted, and your quiz answers — and the
+    settings that belong to you rather than to the device: your languages,
+    the interface language, tag colours, and whether the filter explains
+    itself. Theme, voices, the reminder, your Lexis sign-in and the like
+    stay on each device.</p>
+  <p><strong>Where it goes.</strong> Into the private CloudKit database of
+    <em>your</em> iCloud account — Apple’s storage, counted against your
+    iCloud plan, readable only when signed in as you. The content of each
+    word is kept in a field iCloud encrypts. <strong>It never reaches us</strong>:
+    Word Garner has no server in this path, we cannot read your iCloud data,
+    and Lexis is not involved. Apple stores it under
+    <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>.</p>
+  <p><strong>How devices hear about a change.</strong> When one device saves
+    a change, Apple sends your other devices a silent push notification, so
+    the word appears there without you opening anything. It shows nothing
+    on screen and carries none of your words; the device then fetches the
+    change from your iCloud.</p>
+  <p><strong>Turning it off and removing it.</strong> Turning the switch off
+    stops syncing on that device; every word stays on it. <em>Remove from
+    iCloud</em>, in the same place, deletes the copy in iCloud for every
+    device; the words stay on each device. Signing out of iCloud pauses it,
+    and a different Apple ID turns it off rather than mixing two people’s
+    words.</p>
+  <p><strong>iCloud Drive backup.</strong> While sync is on, <em>Back up to
+    iCloud Drive</em> (also off by default, per device) writes a second copy
+    of each automatic backup to <em>iCloud Drive ▸ Word Garner</em>, in a
+    folder named after the device — its name and four characters of an
+    identifier iOS gives the app, so two iPhones both called “iPhone” are
+    told apart. The last three are kept. You can see and delete them in the
+    Files app; they are in your iCloud only, never sent to us.</p>
+
+  <h3>Dictionary packs (when you ask for one)</h3>
+  <p>
+    Word Garner can show a word's gender, its irregular forms and how it is
+    said, read from a dictionary file kept on your phone. The grammar of
+    English and German is built into the app; every other file — the
+    pronunciations of those two, and everything for the other languages — is
+    offered for download in Settings ▸ Languages, and nothing is fetched until
+    you tap it.
+  </p>
+  <p>
+    The files are public data — derived from Wikidata and Wiktionary — and are
+    hosted as ordinary downloads on GitHub. Two things go out when you tap:
+  </p>
+  <ul>
+    <li>a request for a small index file listing what is available;</li>
+    <li>a request for the dictionary file itself.</li>
+  </ul>
+  <p>
+    Nothing about you or your vocabulary is sent. The request carries no
+    account, no identifier and no word you captured — it is the same request
+    anyone would make for a public file, and GitHub sees what any web server
+    sees when you fetch something: your IP address and the name of the file.
+    A downloaded pack stays on your phone, is used offline, and can be removed
+    in the same place it was added.
+  </p>
+
+  <h3>Nothing else</h3>
+  <p>
+    There is no other network activity. Word Garner does not check in and does
+    not report usage. With your language models downloaded, any dictionary
+    packs you wanted already fetched, nobody signed in and iCloud sync off,
+    it works entirely offline.
+  </p>
+
+  <h2>Notifications</h2>
+  <p>
+    The optional daily reminder is a local notification scheduled on the device
+    itself, with no server involved, and it is only scheduled when something
+    will actually be due when it fires. The only push notification is the
+    silent one Apple sends while <a href="#icloud">iCloud sync</a> is on, to
+    say another device changed something; it never appears on screen, needs
+    no permission, and carries none of your words.
+  </p>
+
+  <h2>Support requests and bug reports</h2>
+  <p>
+    The report form at <a href="/wordgarner/report/">/report/</a> posts to
+    <a href="https://web3forms.com/">Web3Forms</a>, a third-party form relay,
+    which forwards it to our support mailbox. It receives what you typed, the
+    email address you gave if you gave one, and the app details shown to you on
+    that page. The form takes text only; there is no file upload. Web3Forms processes it as a data
+    processor on our behalf; see their own privacy terms. If you would rather
+    not use it, email us instead — the address is on the same page.
+  </p>
+  <p>
+    If you email support, we receive whatever you put in that email — typically
+    your email address, your description of the problem, and any diagnostics you
+    chose to paste in. The diagnostics the app can copy for you contain the app
+    version, the platform, your configured language codes, and how many entries
+    you have. They never contain your vocabulary.
+  </p>
+  <p>
+    Support mail is used only to answer you, is never used for marketing, is
+    never sold or shared, and is deleted once the matter is closed.
+  </p>
+
+  <h2>This website</h2>
+  <p>
+    This site is static and is hosted on GitHub Pages. It sets no cookies, runs
+    no analytics and loads nothing from anybody else: no third-party scripts,
+    and no font network. The one font on it is a small piece of the typeface
+    the logo is drawn in, served from this site itself. The one script on
+    it is a few lines of our own on the report page, which copies the app
+    details out of the link the app opened it with so you can see them before
+    sending. Nothing is sent anywhere until you press Send. GitHub, as the
+    host, processes standard server request data such as IP addresses for
+    delivery and security; see
+    <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement">GitHub’s
+    privacy statement</a>.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    Word Garner is not directed at children under 13 and does not knowingly
+    collect any information from them. Since the app collects no personal data
+    at all, there is nothing held about any user of any age.
+  </p>
+
+  <h2>Your data, your control</h2>
+  <ul>
+    <li><strong>See it</strong> — everything the app holds is visible in the
+      app itself.</li>
+    <li><strong>Take it</strong> — export your whole vocabulary to a file (JSON
+      inside), or to an Anki deck, from Settings.</li>
+    <li><strong>Delete it</strong> — delete individual entries in the app, or
+      uninstall the app to remove everything on the device, including backups.
+      If you used iCloud sync, Settings ▸ Data ▸ <em>Remove from iCloud</em>
+      deletes the iCloud copy, and backups in iCloud Drive are deleted in the
+      Files app.</li>
+    <li><strong>Delete the account</strong> — if you signed in, Settings ▸
+      Account ▸ Delete account removes everything our service holds and
+      revokes the sign-in, without writing to anybody.</li>
+  </ul>
+  <p>
+    Unless you signed in, we hold no data about you at all, so there is nothing
+    for us to hand over, correct or erase on request. If you did sign in, what
+    we hold is an anonymous identifier and a daily counter — plus, for an
+    email account, the hashed address and password — and the delete button
+    above removes all of it; you are welcome to write to us instead.
+  </p>
+
+  <h2>What might change, and what would not</h2>
+  <p>
+    Everything above describes the app as it is today. One thing is still
+    being built, and it would be <em>optional</em> in exactly the way the
+    hosted service already is:
+  </p>
+  <ul>
+    <li><strong>Hosted storage</strong> — a copy of your vocabulary kept by
+      Word Garner’s own service, so that, for example, an Android phone could
+      share a vocabulary with an iPhone. It does not exist yet, and nothing of
+      yours is stored by us until this page says otherwise.</li>
+  </ul>
+  <p>
+    Sync between your own Apple devices now exists, and it is not this: it
+    keeps your vocabulary in <a href="#icloud">your own iCloud</a>, where we
+    cannot see it, and it is off unless you turn it on.
+  </p>
+  <p>
+    The hosted engine used to sit in this list. It now exists, and
+    <a href="#hosted">what it sends, what it keeps and how to delete it</a> is
+    written above rather than promised here — which is what this section
+    said would happen.
+  </p>
+  <p>
+    Three promises hold whatever happens. <strong>Signing in is never a
+    prerequisite for using Word Garner</strong>: there is no sign-in wall, no
+    account needed to capture a word, and no screen to get past to start.
+    <strong>Translation on the device stays free and needs no account</strong>,
+    so nothing hosted ever becomes the only way to use the app. And <strong>this
+    page is updated before anything ships, not after</strong> — as it was for
+    the hosted engine.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    If this policy changes, the updated version will be posted here with a new
+    date at the top. Material changes will also be noted in the app’s release
+    notes.
+  </p>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 zhware</span>
+    <span class="spacer"></span>
+    <a href="/wordgarner/support/">Support</a>
+    <a href="/wordgarner/privacy/">Privacy</a>
+    <a href="/wordgarner/terms/">Terms</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support · Trail Trove</title>
+  <link rel="icon" href="/trailtrove/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/trailtrove/apple-touch-icon.png">
+  <style>
+    :root { --fg: #1b1b1b; --bg: #fff; --muted: #5b6672; --link: #14324A; --rule: #e3e0d8; --band: #14324A; --cream: #F4EFE4; --gold: #F2B544; }
+    @media (prefers-color-scheme: dark) { :root { --fg: #eee; --bg: #081625; --muted: #9aa7b4; --link: #F2B544; --rule: #1f3448; } }
+    body { font-family: -apple-system, system-ui, sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; color: var(--fg); background: var(--bg); line-height: 1.55; }
+    main { max-width: 42rem; margin: 0 auto; }
+    a { color: var(--link); }
+    header { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.5rem; }
+    header img { width: 48px; height: 48px; border-radius: 11px; }
+    header strong { font-size: 1.25rem; }
+    nav.lang { margin-left: auto; font-size: .95rem; }
+    h1 { font-size: 1.8rem; margin: .5rem 0 1rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    h3 { font-size: 1.02rem; margin: 1.4rem 0 .3rem; }
+    p, li { margin: .4rem 0; }
+    .muted { color: var(--muted); font-size: .92rem; }
+    section + section { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 2rem; }
+    footer { margin-top: 3rem; font-size: .9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <header><a href="/trailtrove/"><img src="/trailtrove/favicon.svg" alt="Trail Trove"></a><strong>Trail Trove</strong><nav class="lang"><a href="#en">English</a> · <a href="#de">Deutsch</a></nav></header>
+    <section id="en" lang="en">
+    <h1>Support</h1>
+    <p>Questions, problems or ideas: write to <a href="mailto:app.support@zhware.org">app.support@zhware.org</a>. Please include your device, its
+    iOS or watchOS version and the app version (Settings → About).</p>
+
+    <h2>How tracking works</h2>
+    <h3>Why does Trail Trove need “Always” location?</h3>
+    <p>iOS only lets an app keep measuring in the background while it uses location. With “Always”, a trail keeps
+    recording with the screen off. Without it, recording stops when you leave the app, and there is no automatic pause.</p>
+    <h3>Light and Precise recording</h3>
+    <p><strong>Light</strong> (default) keeps GPS coarse in the background and records ascent, descent and the altitude
+    profile exactly from the barometer, with a precise position at start, at stop and every 15 minutes. Between
+    those fixes the route on the map is a straight line, helped by the locations of photos you take.
+    <strong>Precise</strong> (Settings → Precise track) logs GPS continuously and uses more battery. While the app is
+    on screen, or the Trail Trove Watch app is, recording is always precise.</p>
+    <h3>Why does my ascent differ from other apps?</h3>
+    <p>Trail Trove counts ascent and descent from the barometer’s relative altitude only, and ignores changes smaller
+    than the ascent threshold (Settings, 3 m by default) as sensor noise. GPS altitude jumps by tens of metres and
+    would inflate the total. Weather changes air pressure too: during a pause, altitude change is not counted.</p>
+    <h3>Pause</h3>
+    <p>When you stop for a break, Trail Trove pauses by itself and resumes when you walk on (needs “Always”). A pause
+    you start yourself only ends when you resume. If you walk on while it is paused, you get a reminder with a
+    Resume button.</p>
+    <h3>The altitude is off</h3>
+    <p>The barometer’s absolute altitude can be off by a few metres to tens of metres. Settings → Calibration sets it
+    to a known altitude, for example from a summit sign or a map.</p>
+
+    <h2>Emergency card</h2>
+    <p>The emergency card shows your position in every format, altitude, place and time, large enough to read aloud.
+    In Switzerland, hold the red button for two seconds to call Rega (1414); iOS asks before it dials. Trail Trove
+    cannot send your position to Rega: their own app, Rega, does that. In Valais, call 144.</p>
+
+    <h2>Apple Watch</h2>
+    <p>The Watch app shows the altitude and air pressure measured by the watch, and starts, pauses, resumes and stops
+    the iPhone’s trail. The iPhone records; the watch does not keep a track of its own. Complications update about
+    every 30 minutes, as watchOS allows.</p>
+
+    <h2>Widgets and Live Activity</h2>
+    <p>The widget shows the last altitude, place, air pressure and daylight. iOS limits how often widgets refresh, so
+    the values can be some minutes old. While a trail records, the Live Activity on the Lock Screen and in the Dynamic
+    Island shows it live and has a pause button.</p>
+
+    <h2>Steps, photos, export</h2>
+    <p>Steps, walking distance and flights climbed are read from Apple Health; Trail Trove never writes to Health.
+    Photos you take during a trail appear on its map and timeline; they are never copied, only referenced. A finished trail
+    exports as GPX or CSV from its map.</p>
+
+    <h2>Battery</h2>
+    <p>Settings → Energy use shows iOS’s daily report of the app’s CPU time, screen and background time, and how long
+    location ran precise or coarse. The first report arrives about a day after installing.</p>
+
+    <h2>Deleting data</h2>
+    <p>Swipe a trail to delete it. Deleting the app deletes all its data.</p>
+    </section>
+
+    <section id="de" lang="de">
+    <h1>Support</h1>
+    <p>Fragen, Probleme oder Ideen: schreib an <a href="mailto:app.support@zhware.org">app.support@zhware.org</a>. Gib bitte dein Gerät, die iOS- oder
+    watchOS-Version und die App-Version an (Einstellungen → Info).</p>
+
+    <h2>So funktioniert die Aufzeichnung</h2>
+    <h3>Warum braucht Trail Trove den Standort «Immer»?</h3>
+    <p>iOS lässt eine App im Hintergrund nur weiter messen, solange sie den Standort nutzt. Mit «Immer» zeichnet ein
+    Trail auch bei ausgeschaltetem Bildschirm weiter auf. Ohne stoppt die Aufzeichnung, sobald du die App verlässt,
+    und es gibt keine automatische Pause.</p>
+    <h3>Leicht und Präzise</h3>
+    <p><strong>Leicht</strong> (Standard) hält das GPS im Hintergrund ungenau und zeichnet Aufstieg, Abstieg und das
+    Höhenprofil genau mit dem Barometer auf, mit präziser Position bei Start, Stopp und alle 15 Minuten. Zwischen
+    diesen Positionen ist die Route auf der Karte eine gerade Linie, ergänzt durch die Orte deiner Fotos.
+    <strong>Präzise</strong> (Einstellungen → Präzise Aufzeichnung) zeichnet das GPS durchgehend auf und braucht mehr
+    Akku. Solange die App oder die Trail-Trove-App auf der Watch auf dem Bildschirm ist, ist die Aufzeichnung immer
+    präzise.</p>
+    <h3>Warum weicht mein Aufstieg von anderen Apps ab?</h3>
+    <p>Trail Trove zählt Aufstieg und Abstieg nur aus der relativen Höhe des Barometers und ignoriert Änderungen unter
+    der Aufstiegsschwelle (Einstellungen, standardmässig 3 m) als Sensorrauschen. Die GPS-Höhe springt um Dutzende
+    Meter und würde die Summe aufblähen. Auch das Wetter ändert den Luftdruck: Während einer Pause zählt eine
+    Höhenänderung nicht.</p>
+    <h3>Pause</h3>
+    <p>Machst du eine Rast, pausiert Trail Trove von selbst und läuft weiter, sobald du weitergehst (braucht «Immer»).
+    Eine Pause, die du selbst startest, endet erst, wenn du fortsetzt. Gehst du während der Pause weiter, erinnert
+    dich eine Mitteilung mit der Taste «Fortsetzen».</p>
+    <h3>Die Höhe stimmt nicht</h3>
+    <p>Die absolute Höhe des Barometers kann einige bis Dutzende Meter daneben liegen. Unter Einstellungen →
+    Kalibrierung setzt du sie auf eine bekannte Höhe, etwa von einem Gipfelschild oder einer Karte.</p>
+
+    <h2>Notfallkarte</h2>
+    <p>Die Notfallkarte zeigt deine Position in allen Formaten, die Höhe, den Ort und die Zeit, gross genug zum
+    Vorlesen. In der Schweiz hältst du den roten Knopf zwei Sekunden, um die Rega (1414) anzurufen; iOS fragt vor dem
+    Wählen nach. Trail Trove kann deine Position nicht an die Rega senden: Das macht ihre eigene App, Rega. Im Wallis
+    wählst du 144.</p>
+
+    <h2>Apple Watch</h2>
+    <p>Die Watch-App zeigt die von der Uhr gemessene Höhe und den Luftdruck und startet, pausiert, setzt fort und
+    beendet den Trail des iPhones. Das iPhone zeichnet auf; die Uhr speichert keine eigene Route. Komplikationen
+    aktualisieren sich etwa alle 30 Minuten, so oft watchOS es erlaubt.</p>
+
+    <h2>Widgets und Live-Aktivität</h2>
+    <p>Das Widget zeigt die letzte Höhe, den Ort, den Luftdruck und das Tageslicht. iOS begrenzt, wie oft Widgets
+    aktualisieren, die Werte können also einige Minuten alt sein. Während ein Trail läuft, zeigt ihn die
+    Live-Aktivität auf dem Sperrbildschirm und in der Dynamic Island live, mit Pausentaste.</p>
+
+    <h2>Schritte, Fotos, Export</h2>
+    <p>Schritte, Gehstrecke und Stockwerke liest Trail Trove aus Apple Health; es schreibt nie in Health. Fotos, die du
+    während eines Trails aufnimmst, erscheinen auf dessen Karte und Zeitachse; sie werden nie kopiert, nur verknüpft.
+    Ein beendeter Trail lässt sich auf seiner Karte als GPX oder CSV exportieren.</p>
+
+    <h2>Akku</h2>
+    <p>Einstellungen → Energieverbrauch zeigt den täglichen Bericht von iOS: CPU-Zeit, Zeit auf dem Bildschirm und im
+    Hintergrund und wie lange der Standort genau oder ungefähr lief. Der erste Bericht kommt etwa einen Tag nach der
+    Installation.</p>
+
+    <h2>Daten löschen</h2>
+    <p>Wische über einen Trail, um ihn zu löschen. Wenn du die App löschst, sind alle ihre Daten gelöscht.</p>
+    </section>
+    <footer><a href="/trailtrove/support/">Support</a> · <a href="/trailtrove/privacy/">Privacy policy / Datenschutz</a> · © 2026 zhware</footer>
+  </main>
+</body>
+</html>
