@@ -11,14 +11,23 @@ GitHub account: `kenix`. DNS: Spaceship. Mail: whatever already serves
 
 1. **Check that `app.support@zhware.org` receives mail.** Send it a test
    from another account.
-2. **Make `wordgarner.support@zhware.org` an alias of it, or forward it**, in
-   your mail provider. Keep it for good. App Review, the Google console, the
-   Web3Forms key and anyone who wrote before all know the old address.
-3. **Web3Forms key (optional once step 2 forwards).** At
-   <https://web3forms.com/> create an access key for
-   `app.support@zhware.org`. The key arrives by mail. Hand it over and it
-   goes into the `access_key` field of `wordgarner/report/index.html`. It is
-   public by design.
+2. **One Web3Forms key for every app.** At <https://web3forms.com/> create an
+   access key for `app.support@zhware.org` and name it `support-zhware`. The
+   key arrives by mail. Hand it over and it goes into the `access_key` field
+   of `wordgarner/report/index.html`, and of any later app's form. It is
+   public by design. Each form's hidden `subject` field says which app
+   a message came from. Word Garner's says `Word Garner report`.
+3. **Retire `wordgarner.support@zhware.org`** (decided 2026-10-18, no
+   forward). Before deleting the mailbox, move everything that still sends to
+   it:
+   - In `svcs/lexis/fly.toml`, change `LEXIS_REPORT_TO` (the daily report and
+     the ceiling alert), then `fly deploy`.
+   - The old Web3Forms key (step 2 replaces it).
+   - The Google consent screen's support email, if it was ever set (step 14).
+   - Any App Store Connect contact that uses it.
+
+   Delete the mailbox after the step 15 submission has gone through, so a
+   reviewer's mail can't bounce in the meantime.
 
 ## B. GitHub repository
 

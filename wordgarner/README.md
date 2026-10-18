@@ -52,7 +52,7 @@ The whole site is one GitHub Pages deployment; see the root `README.md`.
 to `app.support@zhware.org`. GitHub Pages cannot run anything itself,
 so the form needs an off-site endpoint.
 
-Register the access key once at <https://web3forms.com/> with
+The access key is shared by every app's form: one key named `support-zhware`, registered once at <https://web3forms.com/> with
 `app.support@zhware.org` and the website `https://zhware.org/wordgarner/support/`,
 then paste the key into the `access_key` hidden field in `report/index.html`.
 The key is public by design — it only says which mailbox to deliver to.
