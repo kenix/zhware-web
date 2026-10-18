@@ -20,8 +20,9 @@ GitHub account: `kenix`. DNS: Spaceship. Mail: whatever already serves
 3. **Retire `wordgarner.support@zhware.org`** (decided 2026-10-18, no
    forward). Before deleting the mailbox, move everything that still sends to
    it:
-   - In `svcs/lexis/fly.toml`, change `LEXIS_REPORT_TO` (the daily report and
-     the ceiling alert), then `fly deploy`.
+   - In `svcs/lexis/fly.toml`, `LEXIS_REPORT_TO` (the daily report and the ceiling
+     alert) is already `dev.support@zhware.org`; create that mailbox, then
+     `fly deploy`.
    - The old Web3Forms key (step 2 replaces it).
    - The Google consent screen's support email, if it was ever set (step 14).
    - Any App Store Connect contact that uses it.
