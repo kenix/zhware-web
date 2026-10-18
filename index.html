@@ -2,21 +2,173 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>zhware</title>
+<meta name="description" content="Apps by zhware: Word Garner and Trail Trove. Support pages and privacy policies for each.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://zhware.org/">
+<link rel="icon" href="/favicon.svg?v=1" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico?v=1" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
+<link rel="preload" href="/assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-  body { font: 18px/1.5 system-ui, sans-serif; max-width: 32rem; margin: 4rem auto; padding: 0 1.25rem; }
-  h1 { font-size: 1.6rem; }
-  li { margin: .5rem 0; }
+  /* Layout: a maker's index. The signature on top, one sentence, then one
+     row per app: its own tile, what it is, where it runs, and its pages. */
+  @font-face {
+    font-family: "Hanken Grotesk";
+    src: url("/assets/fonts/hanken-grotesk.woff2") format("woff2");
+    font-weight: 400 700;
+    font-display: swap;
+  }
+  :root {
+    --paper: #f3f1ec;
+    --surface: #fbfaf7;
+    --ink: #1e2126;
+    --muted: #63676d;
+    --line: #dcd8d0;
+    --brass: #9a6f1f;        /* text-safe brass; the logo's dot is #b8862b */
+    --brass-soft: #efe5d0;
+    --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --radius: 18px;
+    --measure: 46rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #15171a;
+      --surface: #1c1f23;
+      --ink: #ece9e2;
+      --muted: #9a9ea3;
+      --line: #2c3035;
+      --brass: #d3a54e;
+      --brass-soft: #2a2418;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 1.0625rem/1.55 var(--sans);
+    padding-block: max(2.5rem, env(safe-area-inset-top, 0px)) max(3rem, env(safe-area-inset-bottom, 0px));
+    padding-left: max(1.25rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1.25rem, env(safe-area-inset-right, 0px));
+  }
+  .page { max-width: var(--measure); margin: 0 auto; display: grid; gap: 3.5rem; }
+
+  header { display: grid; gap: 2.75rem; }
+  .logo { display: inline-flex; color: var(--ink); width: fit-content; border-radius: 6px; }
+  .logo svg { height: 2.6rem; width: auto; display: block; }
+  h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: clamp(2rem, 1.3rem + 3vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+    max-width: 18ch;
+  }
+  .lede { margin: 1rem 0 0; color: var(--muted); max-width: 36rem; font-size: 1.125rem; }
+
+  .label {
+    margin: 0 0 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .apps { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+  .app {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.4rem 1.25rem;
+    padding: 1.4rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  .app img { width: 4.5rem; height: 4.5rem; border-radius: 22%; grid-row: span 3; display: block; }
+  .app-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.35rem 0.75rem; }
+  .app h3 { margin: 0; font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+  .app h3 a { color: inherit; text-decoration: none; }
+  .app h3 a:hover { text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: 0.18em; }
+  .status {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--brass); background: var(--brass-soft);
+    padding: 0.2rem 0.55rem; border-radius: 999px;
+  }
+  .runs { margin: 0; font-size: 0.9rem; color: var(--muted); }
+  .what { margin: 0.2rem 0 0; max-width: 34rem; }
+  .pages { grid-column: 2; display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0 0; padding: 0; list-style: none; }
+  .pages a {
+    display: inline-block; padding: 0.35rem 0.8rem; border-radius: 999px;
+    border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-size: 0.92rem;
+  }
+  .pages a:hover { border-color: var(--brass); }
+
+  footer { border-top: 1px solid var(--line); padding-top: 1.5rem; display: grid; gap: 0.4rem; font-size: 0.92rem; color: var(--muted); }
+  footer p { margin: 0; }
+  footer a { color: var(--ink); text-decoration-color: var(--brass); text-underline-offset: 0.18em; }
+
+  a:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+
+  @media (max-width: 30rem) {
+    .app { grid-template-columns: 3.5rem 1fr; padding: 1.1rem; gap: 0.35rem 1rem; }
+    .app img { width: 3.5rem; height: 3.5rem; grid-row: span 2; }
+    .what, .pages { grid-column: 1 / -1; }
+  }
 </style>
 </head>
 <body>
-<h1>zhware</h1>
-<ul>
-  <li><a href="/wordgarner/">Word Garner</a></li>
-  <li><a href="/trailtrove/">Trail Trove</a></li>
-</ul>
+<div class="page">
+  <header>
+    <a class="logo" href="/" aria-label="zhware home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="35 -1000 3152 1303" aria-hidden="true" focusable="false">
+  <path fill="currentColor" d="M34.6 0V-82.8L308.2 -423L318.2 -390.2H45.6V-493H432.2V-404.4L162.4 -62.8L152.2 -103.2H432V0Z M487.2 0V-697H611.8V-381.4L591.4 -378.2Q604.2 -423.4 629.8 -450.7Q655.4 -478 688.5 -490.4Q721.6 -502.8 756.2 -502.8Q840.2 -502.8 887.4 -455.3Q934.6 -407.8 934.6 -322V0H810V-276Q810 -337.8 787.9 -366.4Q765.8 -395 718.8 -395Q665.6 -395 638.7 -356.9Q611.8 -318.8 611.8 -236.4V0Z"/>
+  <path fill="currentColor" fill-opacity="0.62" d="M1119 0 973 -493H1063L1163 -128L1281 -493H1356L1474 -130L1575 -493H1665L1518 0H1440L1319 -375L1198 0Z M2044 0 2038 -99V-309Q2038 -366 2006.5 -397Q1975 -428 1913 -428Q1873 -428 1838 -411.5Q1803 -395 1770 -356L1709 -408Q1750 -456 1803 -478.5Q1856 -501 1919 -501Q2016 -501 2069 -451Q2122 -401 2122 -309V0ZM1881 8Q1825 8 1783.5 -11.5Q1742 -31 1719.5 -66Q1697 -101 1697 -147Q1697 -188 1713.5 -216.5Q1730 -245 1756 -261Q1782 -278 1815.5 -284.5Q1849 -291 1886 -291H2046V-227H1898Q1876 -227 1852 -223Q1828 -219 1810 -206Q1797 -196 1789.5 -181Q1782 -166 1782 -146Q1782 -107 1811 -84Q1840 -61 1889 -61Q1930 -61 1963.5 -80Q1997 -99 2017.5 -132.5Q2038 -166 2038 -208L2073 -172Q2067 -119 2041 -78Q2015 -37 1974.5 -14.5Q1934 8 1881 8Z M2215 0V-493H2300V-361L2278 -356Q2285 -400 2311.5 -432.5Q2338 -465 2373.5 -483Q2409 -501 2443 -501Q2466 -501 2487 -496Q2508 -491 2530 -479L2488 -403Q2476 -409 2459.5 -413Q2443 -417 2428 -417Q2404 -417 2380.5 -408Q2357 -399 2338 -380Q2319 -361 2309 -329Q2305 -315 2302.5 -292.5Q2300 -270 2300 -231V0Z M2785 8Q2727 8 2683.5 -11.5Q2640 -31 2611.5 -66Q2583 -101 2568.5 -146.5Q2554 -192 2554 -243Q2554 -294 2568 -340.5Q2582 -387 2609.5 -423Q2637 -459 2679 -480Q2721 -501 2777 -501Q2834 -501 2875.5 -481.5Q2917 -462 2943.5 -428Q2970 -394 2983 -352Q2996 -310 2996 -265Q2996 -261 2995.5 -246.5Q2995 -232 2993 -221H2638Q2641 -149 2680 -109Q2719 -69 2786 -69Q2829 -69 2861 -83Q2893 -97 2921 -128L2980 -76Q2953 -47 2923 -28.5Q2893 -10 2859.5 -1Q2826 8 2785 8ZM2912 -264Q2914 -272 2914.5 -280Q2915 -288 2915 -296Q2915 -320 2906.5 -344Q2898 -368 2881.5 -387.5Q2865 -407 2839.5 -418.5Q2814 -430 2779 -430Q2736 -430 2705 -410Q2674 -390 2657 -357Q2640 -324 2637 -284H2940Z"/>
+  <path fill="#b8862b" d="M3053.8 0V-131.6H3186.2V0Z"/>
+</svg></a>
+    <div>
+      <h1>Small apps that keep your things on your device.</h1>
+      <p class="lede">Each app does one job, works without an account, and keeps what you put in it on your phone. Every one has its own support page and privacy policy below.</p>
+    </div>
+  </header>
+
+  <main>
+    <h2 class="label">Apps</h2>
+    <ul class="apps">
+      <li class="app">
+        <img src="/wordgarner/icon.svg?v=2" alt="" width="72" height="72">
+        <div class="app-head"><h3><a href="/wordgarner/">Word Garner</a></h3><span class="status">Coming soon</span></div>
+        <p class="runs">iPhone first, Android later</p>
+        <p class="what">A vocabulary notebook. Share a word from whatever you are reading, get it back translated and explained, and revise it with a short quiz.</p>
+        <ul class="pages">
+          <li><a href="/wordgarner/">About</a></li>
+          <li><a href="/wordgarner/support/">Support</a></li>
+          <li><a href="/wordgarner/privacy/">Privacy</a></li>
+          <li><a href="/wordgarner/terms/">Terms</a></li>
+        </ul>
+      </li>
+      <li class="app">
+        <img src="/trailtrove/favicon.svg" alt="" width="72" height="72">
+        <div class="app-head"><h3><a href="/trailtrove/">Trail Trove</a></h3><span class="status">Coming soon</span></div>
+        <p class="runs">iPhone and Apple Watch</p>
+        <p class="what">Your altitude from the barometer, air pressure, daylight and steps, and trail recording that is light on the battery.</p>
+        <ul class="pages">
+          <li><a href="/trailtrove/">About</a></li>
+          <li><a href="/trailtrove/support/">Support</a></li>
+          <li><a href="/trailtrove/privacy/">Privacy</a></li>
+        </ul>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>Questions about any app: <a href="mailto:app.support@zhware.org">app.support@zhware.org</a></p>
+    <p>This site sets no cookies, runs no analytics and loads nothing from anyone else.</p>
+    <p>© 2026 zhware</p>
+  </footer>
+</div>
 </body>
 </html>
