@@ -52,11 +52,11 @@
     <p>Each is optional; the app works with what you allow.</p>
 
     <h2>Network</h2>
-    <p>Trail Trove uses the network for maps, place names, hiking route info, map search, the weather and route reconstruction only, and sends no identifier with any request:</p>
+    <p>Trail Trove uses the network for maps, place names, hiking route info, map search, the weather, camping and route reconstruction only, and sends no identifier with any request:</p>
     <ul>
       <li><strong>Apple</strong>: map tiles and satellite imagery from Apple Maps, and turning a position into a place
       name (reverse geocoding), also to name a trail or saved area outside Switzerland, and the points of interest and
-      street address nearest a trail’s start and end; and when you search the map, the text you type and the map area,
+      street address nearest a trail’s start and end, and the country of a point whose camping page you open; and when you search the map, the text you type and the map area,
       for suggestions. Apple receives the map area, the coordinate or the typed text, under
       <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>.</li>
       <li><strong>swisstopo</strong> (Federal Office of Topography, Switzerland), in Switzerland, when you choose one of its
@@ -80,16 +80,24 @@
       <code>api3.geo.admin.ch</code> (a route’s page opens on schweizmobil.ch in Safari’s view inside the app only if you choose it, and then
       schweizmobil.ch’s own privacy terms apply); and in Switzerland the postcode at your position, for the place
       shown on Today and the emergency card, and at a point whose weather you open, also from
-      <code>api3.geo.admin.ch</code>. swisstopo receives the
+      <code>api3.geo.admin.ch</code>; and at a Swiss point whose camping page you open, the wildlife rest zones and
+      federal protected areas there and its height, also from <code>api3.geo.admin.ch</code>. swisstopo receives the
       requested map area, the coordinates or the typed text, and your device’s IP address, under the
       <a href="https://www.geo.admin.ch/en/general-terms-of-use-fsdi">terms of use of geo.admin.ch</a>.</li>
+      <li><strong>Waymarked Trails</strong>, outside Switzerland and near its border, when you turn on hiking, cycling
+      or mountain bike routes or pistes: map tiles from <code>tile.waymarkedtrails.org</code>, and when you tap the map,
+      the routes in the tapped area from <code>hiking.waymarkedtrails.org</code> (and its cycling, mtb and slopes
+      siblings). A route’s page opens there in Safari’s view only if you choose it. Waymarked Trails receives the
+      requested map area and your device’s IP address, under its
+      <a href="https://hiking.waymarkedtrails.org/#help-about">terms</a>.</li>
     </ul>
     <p>The weather forecast opens in Safari’s view inside the app, only if you choose it: MeteoSwiss
     (<code>meteoswiss.admin.ch</code>, <code>meteoschweiz.admin.ch</code>) for the postcode in Switzerland, meteoblue
     (<code>meteoblue.com</code>) for the coordinates elsewhere. Those pages are loaded by Safari under the sites’ own
-    privacy terms; Trail Trove copies no weather data.</p>
+    privacy terms; Trail Trove copies no weather data. Camping opens the country’s source page the same way; at a Swiss
+    point, a protected area’s object sheet opens too, only if you choose it. Trail Trove keeps no camping rules.</p>
     <p>Map tiles you viewed or saved for offline use are kept on your iPhone. Trail Trove sends nothing else to anyone.
-    Swiss maps, hiking trails, paths, heights and place names: ©swisstopo; stops: ©BAV; departures: opentransportdata.swiss; addresses: ©BFS; SchweizMobil routes: ©ASTRA and the cantons; snowshoe and ski tours: SAC; wildlife rest zones: BAFU.</p>
+    Swiss maps, hiking trails, paths, heights and place names: ©swisstopo; stops: ©BAV; departures: opentransportdata.swiss; addresses: ©BFS; SchweizMobil routes: ©ASTRA and the cantons; snowshoe and ski tours: SAC; wildlife rest zones: BAFU. Routes outside Switzerland, and pistes: ©OpenStreetMap contributors, Waymarked Trails.</p>
 
     <h2>Apple Watch</h2>
     <p>The iPhone and the Watch exchange the current values and trail commands directly through Apple’s
@@ -144,12 +152,12 @@
     <p>Jede ist freiwillig; die App arbeitet mit dem, was du erlaubst.</p>
 
     <h2>Netzwerk</h2>
-    <p>Trail Trove nutzt das Netzwerk nur für Karten, Ortsnamen, Wanderrouten-Infos, die Kartensuche, das Wetter und die Routenrekonstruktion und sendet mit keiner Anfrage eine Kennung:</p>
+    <p>Trail Trove nutzt das Netzwerk nur für Karten, Ortsnamen, Wanderrouten-Infos, die Kartensuche, das Wetter, das Campieren und die Routenrekonstruktion und sendet mit keiner Anfrage eine Kennung:</p>
     <ul>
       <li><strong>Apple</strong>: Kartenkacheln und Satellitenbilder von Apple Karten sowie die Umwandlung einer
       Position in einen Ortsnamen (Reverse Geocoding), auch um einen Trail oder gespeicherten Kartenausschnitt ausserhalb der
-      Schweiz zu benennen, und die nächsten Points of Interest und die Strassenadresse bei Start und Ziel eines Trails;
-      und wenn du die Karte durchsuchst, den eingetippten Text und den Kartenausschnitt, für Vorschläge.
+      Schweiz zu benennen, und die nächsten Points of Interest und die Strassenadresse bei Start und Ziel eines Trails,
+      und das Land einer Stelle, deren Campier-Seite du öffnest; und wenn du die Karte durchsuchst, den eingetippten Text und den Kartenausschnitt, für Vorschläge.
       Apple erhält den Kartenausschnitt, die Koordinate oder den eingetippten Text, gemäss
       der <a href="https://www.apple.com/legal/privacy/de-ww/">Datenschutzrichtlinie von Apple</a>.</li>
       <li><strong>swisstopo</strong> (Bundesamt für Landestopografie), in der Schweiz, wenn du eine ihrer Karten
@@ -176,16 +184,25 @@
       ebenfalls von <code>api3.geo.admin.ch</code> (die Seite einer Route auf schweizmobil.ch öffnet sich nur auf deine Wahl, in der Safari-Ansicht in der App;
       dann gelten die Datenschutzbestimmungen von schweizmobil.ch); und in der Schweiz die Postleitzahl an deiner Position, für den
       Ort auf «Heute» und der Notfallkarte, und an einer Stelle, deren Wetter du öffnest, ebenfalls von
-      <code>api3.geo.admin.ch</code>.
+      <code>api3.geo.admin.ch</code>; und an einer Stelle in der Schweiz, deren Campier-Seite du öffnest, die
+      Wildruhezonen und eidgenössischen Schutzgebiete dort und ihre Höhe, ebenfalls von <code>api3.geo.admin.ch</code>.
       swisstopo erhält den angefragten Kartenausschnitt, die Koordinaten oder den eingetippten Text und die IP-Adresse deines Geräts, gemäss den
       <a href="https://www.geo.admin.ch/de/allgemeine-nutzungsbedingungen-bgdi">Nutzungsbedingungen von geo.admin.ch</a>.</li>
+      <li><strong>Waymarked Trails</strong>, ausserhalb der Schweiz und nahe ihrer Grenze, wenn du Wander-, Velo- oder
+      Mountainbikerouten oder Pisten einschaltest: Kartenkacheln von <code>tile.waymarkedtrails.org</code>, und wenn du
+      auf die Karte tippst, die Routen dort von <code>hiking.waymarkedtrails.org</code> (und den Geschwistern cycling,
+      mtb und slopes). Die Seite einer Route öffnet sich dort nur auf deine Wahl in der Safari-Ansicht. Waymarked Trails erhält den
+      angefragten Kartenausschnitt und die IP-Adresse deines Geräts, gemäss seinen
+      <a href="https://hiking.waymarkedtrails.org/#help-about">Bedingungen</a>.</li>
     </ul>
     <p>Die Wettervorhersage öffnet sich nur auf deine Wahl in der Safari-Ansicht in der App: MeteoSchweiz
     (<code>meteoschweiz.admin.ch</code>, <code>meteoswiss.admin.ch</code>) für die Postleitzahl in der Schweiz,
     meteoblue (<code>meteoblue.com</code>) für die Koordinaten anderswo. Diese Seiten lädt Safari gemäss den
-    Datenschutzbestimmungen der jeweiligen Website; Trail Trove übernimmt keine Wetterdaten.</p>
+    Datenschutzbestimmungen der jeweiligen Website; Trail Trove übernimmt keine Wetterdaten. Campieren öffnet die Quellseite des
+    Lands gleich; an einer Stelle in der Schweiz auch das Objektblatt eines Schutzgebiets, nur auf deine Wahl. Trail Trove
+    speichert keine Campier-Regeln.</p>
     <p>Kartenkacheln, die du angesehen oder für die Offline-Nutzung gespeichert hast, bleiben auf deinem iPhone. Sonst
-    sendet Trail Trove nichts an niemanden. Schweizer Karten, Wanderwege, Wege, Höhen und Ortsnamen: ©swisstopo; Haltestellen: ©BAV; Abfahrten: opentransportdata.swiss; Adressen: ©BFS; SchweizMobil-Routen: ©ASTRA und Kantone; Schneeschuh- und Skitouren: SAC; Wildruhezonen: BAFU.</p>
+    sendet Trail Trove nichts an niemanden. Schweizer Karten, Wanderwege, Wege, Höhen und Ortsnamen: ©swisstopo; Haltestellen: ©BAV; Abfahrten: opentransportdata.swiss; Adressen: ©BFS; SchweizMobil-Routen: ©ASTRA und Kantone; Schneeschuh- und Skitouren: SAC; Wildruhezonen: BAFU. Routen ausserhalb der Schweiz und Pisten: ©OpenStreetMap-Mitwirkende, Waymarked Trails.</p>
 
     <h2>Apple Watch</h2>
     <p>iPhone und Watch tauschen die aktuellen Werte und Trail-Befehle direkt über Apples WatchConnectivity aus,
