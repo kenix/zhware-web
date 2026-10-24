@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy · Crewbook</title>
+  <link rel="icon" href="/crewbook/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/crewbook/apple-touch-icon.png">
+  <style>
+    :root { --fg: #1b2229; --bg: #fff; --muted: #5b6672; --link: #1F6EA3; --rule: #dbe5ec; --brand: #2F8AC4; }
+    @media (prefers-color-scheme: dark) { :root { --fg: #e8eef3; --bg: #0b1a26; --muted: #9aaab8; --link: #6FB6E6; --rule: #1d3447; } }
+    body { font-family: -apple-system, system-ui, sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; color: var(--fg); background: var(--bg); line-height: 1.55; }
+    main { max-width: 42rem; margin: 0 auto; }
+    a { color: var(--link); }
+    header { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.5rem; }
+    header img { width: 48px; height: 48px; border-radius: 11px; }
+    header strong { font-size: 1.25rem; }
+    nav.lang { margin-left: auto; font-size: .95rem; }
+    h1 { font-size: 1.8rem; margin: .5rem 0 1rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; border-left: 4px solid var(--brand); padding-left: .6rem; }
+    h3 { font-size: 1.02rem; margin: 1.4rem 0 .3rem; }
+    p, li { margin: .4rem 0; }
+    .muted { color: var(--muted); font-size: .92rem; }
+    section + section { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 2rem; }
+    footer { margin-top: 3rem; font-size: .9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <header><a href="/crewbook/"><img src="/crewbook/favicon.svg" alt="Crewbook"></a><strong>Crewbook</strong><nav class="lang"><a href="#en">English</a> · <a href="#de">Deutsch</a></nav></header>
+    <section id="en" lang="en">
+    <h1>Privacy policy</h1>
+    <p class="muted">Last updated 24 October 2026</p>
+    <p><strong>In short:</strong> Crewbook is a rowing club’s app. Your club decides what is recorded about you; zhware
+    runs the service for the club. There are no ads, no tracking and no analytics.</p>
+
+    <h2>Who is responsible</h2>
+    <p>The <strong>club</strong> is the controller of its members’ data (bookings, trips, distances, profile, photos,
+    damage reports). zhware processes that data on the club’s behalf, under the Crewbook agreement the club accepts when
+    it registers. <strong>zhware</strong> is the controller only for the account itself: your email address and signing in.
+    Questions about what a club does with your data go to the club first.</p>
+
+    <h2>What is stored</h2>
+    <ul>
+      <li><strong>Account</strong>: your email address, used to sign in with a one-time code (no password), and your
+      sessions.</li>
+      <li><strong>Profile</strong>: your name; optionally a phone number, which the members of your club can see so a
+      crew can call before taking a boat.</li>
+      <li><strong>Photo</strong> (optional): a profile photo, only after you consent to show it to your club. One photo,
+      replaced in place; no older versions are served. It is deleted when you remove it or when you are deactivated in the
+      club. A copy can survive for up to 30 days in encrypted backups and the database’s restore window.</li>
+      <li><strong>Club activity</strong>: your bookings, trips, distances and the ranking they feed. Damage reports, with
+      photos, are kept until the report is closed.</li>
+      <li><strong>Distance from the Apple Watch</strong> (optional): the app writes a rowing workout to Apple Health.
+      If the watch recorded the route, only the kilometres of the trip are sent to Crewbook, never the route.</li>
+    </ul>
+
+    <h2>Position on the water</h2>
+    <p>Only while a trip is on the water, and only if you opted in (a junior only with a parent’s consent), your watch or
+    phone sends its latest position about once a minute. It is shown only on your club’s board at the boathouse. Only the
+    last position is kept, and it is deleted when the trip ends. No tracks are stored. Without your opt-in, the watch
+    records the workout for Health only.</p>
+
+    <h2>Where it runs</h2>
+    <ul>
+      <li><strong>Fly.io</strong> (Frankfurt): the server.</li>
+      <li><strong>Neon</strong> (Postgres, Frankfurt, eu-central-1): the database.</li>
+      <li><strong>Resend</strong>: sends the sign-in emails.</li>
+    </ul>
+
+    <h2>Requests from your device</h2>
+    <p>The map loads tiles from <strong>swisstopo</strong>; swisstopo therefore receives the requested map area and your
+    device’s IP address, under the
+    <a href="https://www.geo.admin.ch/en/general-terms-of-use-fsdi">terms of use of geo.admin.ch</a>. Weather and the storm
+    warning are fetched by the server, not by your device: Open-Meteo for the forecast and the Kantonspolizei Zürich
+    (<code>zh.stwarn.ch</code>) for the storm warning. Your device sends nothing to them.</p>
+
+    <h2>On your phone</h2>
+    <p>The phone keeps a local copy of your club’s data so the app works offline at the boathouse. It is deleted when you
+    sign out. Writes made offline wait in a queue and go to the server later.</p>
+
+    <h2>Ads and tracking</h2>
+    <p>None. Crewbook has no ads, no tracking and no analytics.</p>
+
+    <h2>Deleting your account</h2>
+    <p>In the app: Club → Profile → Delete account, confirmed with a code sent to your email. This deletes your account,
+    sessions, email address, phone number and photos, and deactivates your memberships. Your name stays on your member
+    rows in your former clubs, so their trips stay in the logbook and ranking under that name: the logbook is the club’s
+    record. Backups follow the 30-day limit above.</p>
+
+    <h2>Your rights and contact</h2>
+    <p>Under the Swiss Federal Act on Data Protection (nDSG) and, where it applies, the GDPR, you may ask for access,
+    correction, deletion, and to restrict or object to processing. For data a club controls, the club answers; we help it
+    to. Email <a href="mailto:app.support@zhware.org">app.support@zhware.org</a>. If the app’s handling of data changes,
+    this page changes with it, with a new date.</p>
+    </section>
+
+    <section id="de" lang="de">
+    <h1>Datenschutzerklärung</h1>
+    <p class="muted">Zuletzt aktualisiert am 24. Oktober 2026</p>
+    <p><strong>Kurz:</strong> Crewbook ist die App eines Ruderclubs. Dein Club entscheidet, was über dich erfasst wird;
+    zhware betreibt den Dienst für den Club. Es gibt keine Werbung, kein Tracking und keine Analyse.</p>
+
+    <h2>Wer verantwortlich ist</h2>
+    <p>Der <strong>Club</strong> ist Verantwortlicher für die Daten seiner Mitglieder (Reservationen, Fahrten,
+    Distanzen, Profil, Fotos, Schadenmeldungen). zhware verarbeitet diese Daten im Auftrag des Clubs, gemäss der
+    Crewbook-Vereinbarung, die der Club bei der Registrierung akzeptiert. <strong>zhware</strong> ist nur für das Konto
+    selbst Verantwortlicher: deine E-Mail-Adresse und die Anmeldung. Fragen dazu, was ein Club mit deinen Daten tut,
+    richtest du zuerst an den Club.</p>
+
+    <h2>Was gespeichert wird</h2>
+    <ul>
+      <li><strong>Konto</strong>: deine E-Mail-Adresse für die Anmeldung mit einem einmaligen Code (kein Passwort) und
+      deine Sitzungen.</li>
+      <li><strong>Profil</strong>: dein Name; optional eine Telefonnummer, die die Mitglieder deines Clubs sehen, damit
+      eine Crew anrufen kann, bevor sie ein Boot nimmt.</li>
+      <li><strong>Foto</strong> (optional): ein Profilfoto, erst nachdem du zugestimmt hast, es dem Club zu zeigen. Ein
+      Foto, an Ort und Stelle ersetzt; ältere Versionen werden nicht ausgeliefert. Es wird gelöscht, wenn du es entfernst
+      oder im Club deaktiviert wirst. Eine Kopie kann bis zu 30 Tage in verschlüsselten Backups und im Wiederherstellungs-
+      fenster der Datenbank bestehen bleiben.</li>
+      <li><strong>Club-Aktivität</strong>: deine Reservationen, Fahrten, Distanzen und die Rangliste, die daraus entsteht.
+      Schadenmeldungen samt Fotos werden bis zum Abschluss der Meldung aufbewahrt.</li>
+      <li><strong>Distanz von der Apple Watch</strong> (optional): Die App schreibt ein Rudern-Training in Apple Health.
+      Hat die Uhr die Strecke aufgezeichnet, gehen nur die Kilometer der Fahrt an Crewbook, nie die Strecke.</li>
+    </ul>
+
+    <h2>Position auf dem Wasser</h2>
+    <p>Nur solange eine Fahrt auf dem Wasser ist, und nur wenn du eingewilligt hast (Junioren nur mit Einwilligung der
+    Eltern), sendet deine Uhr oder dein Telefon etwa einmal pro Minute die letzte Position. Sie wird nur auf der Tafel
+    deines Clubs im Bootshaus angezeigt. Nur die letzte Position wird gespeichert und am Ende der Fahrt gelöscht. Es
+    werden keine Spuren gespeichert. Ohne deine Einwilligung zeichnet die Uhr das Training nur für Health auf.</p>
+
+    <h2>Wo es läuft</h2>
+    <ul>
+      <li><strong>Fly.io</strong> (Frankfurt): der Server.</li>
+      <li><strong>Neon</strong> (Postgres, Frankfurt, eu-central-1): die Datenbank.</li>
+      <li><strong>Resend</strong>: versendet die Anmelde-E-Mails.</li>
+    </ul>
+
+    <h2>Anfragen deines Geräts</h2>
+    <p>Die Karte lädt Kacheln von <strong>swisstopo</strong>; swisstopo erhält dabei den angefragten Kartenausschnitt und
+    die IP-Adresse deines Geräts, gemäss den
+    <a href="https://www.geo.admin.ch/de/nutzungsbedingungen-fsdi">Nutzungsbedingungen von geo.admin.ch</a>. Wetter und
+    Sturmwarnung holt der Server, nicht dein Gerät: Open-Meteo für die Vorhersage und die Kantonspolizei Zürich
+    (<code>zh.stwarn.ch</code>) für die Sturmwarnung. Dein Gerät sendet ihnen nichts.</p>
+
+    <h2>Auf deinem Telefon</h2>
+    <p>Das Telefon hält eine lokale Kopie der Daten deines Clubs, damit die App im Bootshaus offline funktioniert. Sie
+    wird beim Abmelden gelöscht. Offline gemachte Änderungen warten in einer Warteschlange und gehen später an den
+    Server.</p>
+
+    <h2>Werbung und Tracking</h2>
+    <p>Keine. Crewbook hat keine Werbung, kein Tracking und keine Analyse.</p>
+
+    <h2>Konto löschen</h2>
+    <p>In der App: Club → Profil → Konto löschen, bestätigt mit einem Code per E-Mail. Das löscht dein Konto, die
+    Sitzungen, E-Mail-Adresse, Telefonnummer und Fotos und deaktiviert deine Mitgliedschaften. Dein Name bleibt bei
+    deinen Mitglieder-Einträgen in früheren Clubs stehen, damit deren Fahrten im Fahrtenbuch und in der Rangliste unter
+    diesem Namen bleiben: Das Fahrtenbuch ist die Aufzeichnung des Clubs. Backups folgen der 30-Tage-Grenze oben.</p>
+
+    <h2>Deine Rechte und Kontakt</h2>
+    <p>Nach dem Schweizer Datenschutzgesetz (nDSG) und, wo anwendbar, der DSGVO kannst du Auskunft, Berichtigung,
+    Löschung sowie Einschränkung oder Widerspruch verlangen. Bei Daten, für die ein Club verantwortlich ist, antwortet
+    der Club; wir unterstützen ihn dabei. E-Mail:
+    <a href="mailto:app.support@zhware.org">app.support@zhware.org</a>. Ändert sich der Umgang der App mit Daten, ändert
+    sich diese Seite mit, mit neuem Datum.</p>
+    </section>
+
+    <footer><a href="/crewbook/">Crewbook</a> · <a href="/crewbook/support/">Support</a> · © 2026 <a href="/">zhware</a></footer>
+  </main>
+</body>
+</html>

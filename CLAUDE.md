@@ -14,6 +14,7 @@ The static site for every zhware app, one GitHub Pages deployment at
 | `assets/fonts/` | `hanken-grotesk.woff2` (Latin, weights 400 to 700, about 13 kB) and its `OFL.txt`, used by the root pages only |
 | `wordgarner/` | Word Garner: landing, privacy, support, terms, report form |
 | `trailtrove/` | Trail Trove: landing, support, privacy, report form |
+| `crewbook/` | Crewbook: landing, support, privacy (agreement page pending the owner's text) |
 | `404.html` | Neutral 404 for the whole site; Pages serves only a root one |
 | `CNAME` | `zhware.org` |
 | `.well-known/apple-app-site-association` | One file for every app: Apple reads it from the domain root, never from a path. Add each app's `<team>.<bundle id>` under `webcredentials` |
