@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank you · Trail Trove</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/trailtrove/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/trailtrove/apple-touch-icon.png">
+  <style>
+    :root { --fg: #1b1b1b; --bg: #fff; --muted: #5b6672; --link: #14324A; --rule: #e3e0d8; }
+    @media (prefers-color-scheme: dark) { :root { --fg: #eee; --bg: #081625; --muted: #9aa7b4; --link: #F2B544; --rule: #1f3448; } }
+    body { font-family: -apple-system, system-ui, sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; color: var(--fg); background: var(--bg); line-height: 1.55; }
+    main { max-width: 42rem; margin: 0 auto; }
+    a { color: var(--link); }
+    header { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.5rem; }
+    header img { width: 48px; height: 48px; border-radius: 11px; }
+    header strong { font-size: 1.25rem; }
+    h1 { font-size: 1.8rem; margin: .5rem 0 1rem; }
+    section + section { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 2rem; }
+    footer { margin-top: 3rem; font-size: .9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <header><a href="/trailtrove/"><img src="/trailtrove/favicon.svg" alt="Trail Trove"></a><strong>Trail Trove</strong></header>
+    <section id="en" lang="en">
+    <h1>Thank you</h1>
+    <p>Your message is on its way. If you left an email address, expect a reply within a few days.</p>
+    </section>
+    <section id="de" lang="de">
+    <h1>Danke</h1>
+    <p>Deine Nachricht ist unterwegs. Hast du eine E-Mail-Adresse angegeben, bekommst du in ein paar Tagen Antwort.</p>
+    </section>
+    <footer><a href="/trailtrove/support/">Support</a> · <a href="/trailtrove/privacy/">Privacy policy / Datenschutz</a> · © 2026 <a href="/">zhware</a></footer>
+  </main>
+  <script>
+    (function () {
+      var de = location.hash === '#de' || (location.hash !== '#en' && /^de\b/i.test(navigator.language || ''));
+      document.getElementById(de ? 'en' : 'de').hidden = true;
+    })();
+  </script>
+</body>
+</html>

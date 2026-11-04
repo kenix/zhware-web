@@ -13,7 +13,7 @@ The static site for every zhware app, one GitHub Pages deployment at
 | `tools/make_mark.py` | Writes the five files above and the font subset from Hanken Grotesk. Needs `fonttools` and `brotli` in a throwaway venv and the variable TTF from google/fonts; neither is committed. Rasters go through `wordgarner/tools/make_icons.py` |
 | `assets/fonts/` | `hanken-grotesk.woff2` (Latin, weights 400 to 700, about 13 kB) and its `OFL.txt`, used by the root pages only |
 | `wordgarner/` | Word Garner: landing, privacy, support, terms, report form |
-| `trailtrove/` | Trail Trove: landing, support, privacy |
+| `trailtrove/` | Trail Trove: landing, support, privacy, report form |
 | `404.html` | Neutral 404 for the whole site; Pages serves only a root one |
 | `CNAME` | `zhware.org` |
 | `.well-known/apple-app-site-association` | One file for every app: Apple reads it from the domain root, never from a path. Add each app's `<team>.<bundle id>` under `webcredentials` |

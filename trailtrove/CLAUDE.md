@@ -10,6 +10,8 @@ Store requires. Served at `https://zhware.org/trailtrove/` as a folder of the sh
 index.html        redirect / landing with links to support and privacy
 support/index.html   FAQ, contact, how tracking works and its limits — EN and DE on one page
 privacy/index.html   privacy policy — EN and DE on one page
+report/index.html    suggestion and bug form (Web3Forms); the apps pass ?d=<details>&k=<kind>, #de in German
+report/thanks/       where the form redirects after sending
 ```
 
 Each page is self-contained: inline `<style>`, system font stack, light and dark via `prefers-color-scheme`,
@@ -20,7 +22,7 @@ Each page is self-contained: inline `<style>`, system font stack, light and dark
 - Plain HTML and CSS only. No JavaScript frameworks, no trackers, no analytics, no external fonts, no CDNs.
 - English and German for every page. Keep the two versions in sync.
 - **The privacy policy must state what the app actually does**, nothing more, nothing less: on-device only,
-  Apple map tiles and reverse geocoding as the only network use, HealthKit and Photos read-only, no accounts, no
+  Apple map tiles and reverse geocoding as the only network use (the report form is a web page the user fills in), HealthKit and Photos read-only, no accounts, no
   tracking, no ads. When the app's behaviour changes (see `../../apps/trailtrove/docs/SPEC.md`), change the
   policy in the same piece of work.
 - Preview locally with `python3 -m http.server`.

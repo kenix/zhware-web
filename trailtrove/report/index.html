@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suggest or report · Trail Trove</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/trailtrove/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/trailtrove/apple-touch-icon.png">
+  <style>
+    :root { --fg: #1b1b1b; --bg: #fff; --muted: #5b6672; --link: #14324A; --rule: #e3e0d8; --band: #14324A; --cream: #F4EFE4; --gold: #F2B544; --field: #fff; }
+    @media (prefers-color-scheme: dark) { :root { --fg: #eee; --bg: #081625; --muted: #9aa7b4; --link: #F2B544; --rule: #1f3448; --field: #0e2134; } }
+    body { font-family: -apple-system, system-ui, sans-serif; margin: 0; padding: 2rem 1.25rem 4rem; color: var(--fg); background: var(--bg); line-height: 1.55; }
+    main { max-width: 42rem; margin: 0 auto; }
+    a { color: var(--link); }
+    header { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.5rem; }
+    header img { width: 48px; height: 48px; border-radius: 11px; }
+    header strong { font-size: 1.25rem; }
+    nav.lang { margin-left: auto; font-size: .95rem; }
+    h1 { font-size: 1.8rem; margin: .5rem 0 1rem; }
+    p { margin: .4rem 0; }
+    .muted { color: var(--muted); font-size: .92rem; }
+    section + section { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 2rem; }
+    form { display: grid; gap: 1.1rem; margin: 1.5rem 0; }
+    label { display: grid; gap: .35rem; font-weight: 600; }
+    label span { font-weight: 400; color: var(--muted); }
+    select, textarea, input[type=email] { font: inherit; color: var(--fg); background: var(--field); border: 1px solid var(--rule); border-radius: 10px; padding: .6rem .7rem; width: 100%; box-sizing: border-box; }
+    textarea[readonly] { color: var(--muted); font-size: .9rem; }
+    select:focus, textarea:focus, input:focus, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+    button { justify-self: start; font: inherit; font-weight: 600; color: var(--cream); background: var(--band); border: 0; border-radius: 10px; padding: .65rem 1.6rem; cursor: pointer; }
+    footer { margin-top: 3rem; font-size: .9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <header><a href="/trailtrove/"><img src="/trailtrove/favicon.svg" alt="Trail Trove"></a><strong>Trail Trove</strong><nav class="lang"><a href="#en">English</a> · <a href="#de">Deutsch</a></nav></header>
+
+    <!-- Posts straight to Web3Forms, which emails it to app.support@zhware.org: GitHub Pages serves static files only.
+         Plain POST; the script below only fills in what the app passed in the query string. -->
+    <section id="en" lang="en">
+    <h1>Suggest or report</h1>
+    <p>One person reads every message. For a problem, say what you did, what happened and what you expected.</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="18036f08-31e8-4039-8b6d-1eeaa0fe0ed5">
+      <input type="hidden" name="subject" value="Trail Trove report">
+      <input type="hidden" name="from_name" value="Trail Trove report form">
+      <input type="hidden" name="redirect" value="https://zhware.org/trailtrove/report/thanks/">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <label for="kind-en">What is it?
+        <select id="kind-en" name="Kind" class="kind" required>
+          <option value="Idea">An idea for the app</option>
+          <option value="Bug">Something is broken</option>
+          <option value="Question">A question</option>
+        </select>
+      </label>
+      <label for="message-en">Your message
+        <textarea id="message-en" name="Message" rows="8" required></textarea>
+      </label>
+      <label for="email-en">Your email <span>(optional, so we can reply)</span>
+        <input id="email-en" type="email" name="email" autocomplete="email">
+      </label>
+      <label class="details" for="details-en" hidden>App details <span>(sent with the message, exactly as shown)</span>
+        <textarea id="details-en" name="App details" rows="2" readonly></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+    <p class="muted">Rather write an email, or want to attach a screenshot? Write to
+    <a href="mailto:app.support@zhware.org">app.support@zhware.org</a>. How the form handles what you send:
+    <a href="/trailtrove/privacy/">privacy policy</a>.</p>
+    </section>
+
+    <section id="de" lang="de">
+    <h1>Vorschlagen oder melden</h1>
+    <p>Jede Nachricht liest eine Person. Bei einem Problem: Was hast du gemacht, was ist passiert, was hast du erwartet?</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="18036f08-31e8-4039-8b6d-1eeaa0fe0ed5">
+      <input type="hidden" name="subject" value="Trail Trove report">
+      <input type="hidden" name="from_name" value="Trail Trove report form">
+      <input type="hidden" name="redirect" value="https://zhware.org/trailtrove/report/thanks/#de">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <label for="kind-de">Worum geht es?
+        <select id="kind-de" name="Kind" class="kind" required>
+          <option value="Idea">Eine Idee für die App</option>
+          <option value="Bug">Etwas funktioniert nicht</option>
+          <option value="Question">Eine Frage</option>
+        </select>
+      </label>
+      <label for="message-de">Deine Nachricht
+        <textarea id="message-de" name="Message" rows="8" required></textarea>
+      </label>
+      <label for="email-de">Deine E-Mail <span>(freiwillig, damit wir antworten können)</span>
+        <input id="email-de" type="email" name="email" autocomplete="email">
+      </label>
+      <label class="details" for="details-de" hidden>App-Angaben <span>(gehen genau so mit)</span>
+        <textarea id="details-de" name="App details" rows="2" readonly></textarea>
+      </label>
+      <button type="submit">Senden</button>
+    </form>
+    <p class="muted">Lieber eine E-Mail, oder einen Screenshot anhängen? Schreib an
+    <a href="mailto:app.support@zhware.org">app.support@zhware.org</a>. Was mit dem Gesendeten geschieht:
+    <a href="/trailtrove/privacy/#de">Datenschutz</a>.</p>
+    </section>
+
+    <footer><a href="/trailtrove/support/">Support</a> · <a href="/trailtrove/privacy/">Privacy policy / Datenschutz</a> · © 2026 <a href="/">zhware</a></footer>
+  </main>
+  <script>
+    // The app opens this page as ?d=<version, system, device>&k=<kind>, with #de when it runs in German. One language
+    // shows (the hash, else the browser's); without this script both forms show, empty, and still work.
+    (function () {
+      var q = new URLSearchParams(location.search);
+      var d = q.get('d'), k = q.get('k');
+      document.querySelectorAll('.details').forEach(function (l) {
+        if (d) { l.querySelector('textarea').value = d; l.hidden = false; }
+      });
+      if (k) document.querySelectorAll('.kind').forEach(function (s) { s.value = k; });
+      function show() {
+        var de = location.hash === '#de' || (location.hash !== '#en' && /^de\b/i.test(navigator.language || ''));
+        document.getElementById('en').hidden = de;
+        document.getElementById('de').hidden = !de;
+      }
+      show();
+      window.addEventListener('hashchange', show);
+    })();
+  </script>
+</body>
+</html>
