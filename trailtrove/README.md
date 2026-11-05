@@ -1,7 +1,7 @@
 # trailtrove-web
 
 Static support and privacy site for **Trail Trove**, the free altitude, steps and trail app for iPhone and
-Apple Watch. Plain HTML and CSS, no build step, served by GitHub Pages at <https://zhware.org/trailtrove/>.
+Apple Watch and for Android and Wear OS. Plain HTML and CSS, no build step, served by GitHub Pages at <https://zhware.org/trailtrove/>.
 
 ## Pages
 
@@ -12,7 +12,7 @@ Apple Watch. Plain HTML and CSS, no build step, served by GitHub Pages at <https
 | `/privacy/` | <https://zhware.org/trailtrove/privacy/> | Privacy policy (EN + DE) |
 | `/404.html` | — | Not-found page |
 
-Both URLs are referenced from the app (Settings → About) and from App Store Connect.
+Both URLs are referenced from the apps (Settings → About), from App Store Connect and from Google Play Console.
 
 ## Local preview
 
@@ -27,5 +27,5 @@ Part of the shared zhware.org site; hosting and DNS are in the root `CLAUDE.md`.
 
 ## App
 
-The app source lives in the private repository `kenix/trailtrove`. The privacy policy here must describe what
-that app actually does; change the two together.
+The app source lives in the private repositories `kenix/trailtrove` and `kenix/trailtrove-android`. The privacy policy here must describe what
+those apps actually do; change them together.
