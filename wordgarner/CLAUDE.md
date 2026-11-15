@@ -186,6 +186,11 @@ The claims that would break first:
   cannot access is not "collected" for either store's privacy answers, which
   is why sync adds nothing there. A sync through Lexis (Android) would break
   this and move hosted storage out of *What might change*.
+- "there is no iCloud on Android and no sync of any kind" — the policy's
+  *On Android* section (2026-11-15). It also describes Android Auto Backup
+  as the phone's own doing, with the lexicon excluded; that follows the
+  app's `allowBackup`, `backup_rules.xml` and `data_extraction_rules.xml`,
+  so changing those changes the section.
 - "the app no longer takes an API key of your own" — on the privacy, terms,
   home and support pages. Keys coming back means all four change first.
 - "a word up to 40 characters, a phrase 80, a sentence 300; Chinese,

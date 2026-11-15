@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy policy — Word Garner</title>
-<meta name="description" content="Word Garner's privacy policy. No account needed, no tracking; your vocabulary stays on your phone, and in your own iCloud only if you turn sync on.">
+<meta name="description" content="Word Garner's privacy policy. No account needed, no tracking; your vocabulary stays on your phone, and on iPhone in your own iCloud only if you turn sync on.">
 <link rel="canonical" href="https://zhware.org/wordgarner/privacy/">
 <link rel="icon" href="/wordgarner/favicon.ico?v=2" sizes="32x32">
 <link rel="icon" href="/wordgarner/favicon.svg?v=2" type="image/svg+xml">
@@ -28,7 +28,7 @@
 <main class="wrap">
 
   <h1>Privacy policy</h1>
-  <p class="updated">Last updated 10 October 2026. Applies to the Word Garner
+  <p class="updated">Last updated 15 November 2026. Applies to the Word Garner
     mobile app (<code>org.zhware.wordgarner</code>) for iOS and Android, and to
     this website.</p>
 
@@ -41,8 +41,10 @@
       you asked Lexis, Word Garner’s own small service, about — only if you
       sign in; a dictionary file you chose to download, which is public
       data and carries nothing about you; and your vocabulary, to <em>your
-      own</em> iCloud — only if you turn on iCloud sync, and never to
-      us. <strong>If you never sign in, we store nothing about
+      own</em> iCloud — only on iPhone or iPad, only if you turn on iCloud
+      sync, and never to us. (On Android, the phone’s own backup to your
+      Google account may include the app’s data, if you have it turned on;
+      that is Android’s, not ours, and never reaches us either.) <strong>If you never sign in, we store nothing about
       you whatsoever.</strong> If you do, we store an anonymous identifier
       and how many requests it made today — and, if you signed up with an
       email address rather than Apple or Google, a one-way hash of that
@@ -59,9 +61,11 @@
   <h2>What Word Garner stores, and where</h2>
   <p>
     Everything below is stored on your device, in the app’s own private
-    storage — and, only if you turn on <a href="#icloud">iCloud sync</a>, in
-    your own iCloud as well. None of it is transmitted to us, because there is
-    nowhere to transmit it to.
+    storage — and, on iPhone or iPad and only if you turn on
+    <a href="#icloud">iCloud sync</a>, in your own iCloud as well; on Android,
+    in the phone’s own backup if you have that on (<a href="#android">see
+    below</a>). None of it is transmitted to us, because there is nowhere to
+    transmit it to.
   </p>
   <ul>
     <li><strong>Your vocabulary</strong> — the words, phrases and sentences you
@@ -74,7 +78,8 @@
     <li><strong>Backups</strong> — the app writes periodic exports of your
       vocabulary (JSON, compressed) into its own documents folder on the
       device. They are uploaded nowhere unless you turn on <em>Back up to
-      iCloud Drive</em>, described <a href="#icloud">below</a>.</li>
+      iCloud Drive</em> on iPhone, described <a href="#icloud">below</a>, or
+      Android’s own backup includes them.</li>
     <li><strong>Your sign-in</strong>, if you sign in — a session token held
       in the iOS Keychain or the Android encrypted preference store. Earlier
       versions of the app could hold an API key of yours there; the current
@@ -226,7 +231,7 @@
     the account alone.
   </p>
 
-  <h3 id="icloud">iCloud sync and iCloud Drive backup (only if you turn them on)</h3>
+  <h3 id="icloud">iCloud sync and iCloud Drive backup (iPhone and iPad, only if you turn them on)</h3>
   <p>
     On iPhone and iPad with iOS 17 or later, Settings ▸ Data ▸ <em>iCloud
     sync</em> keeps your vocabulary the same on every device signed in to
@@ -266,6 +271,23 @@
     told apart. The last three are kept. You can see and delete them in the
     Files app; they are in your iCloud only, never sent to us.</p>
 
+  <h3 id="android">On Android</h3>
+  <p>
+    There is no iCloud on Android and no sync of any kind: your vocabulary
+    stays on the phone, and Settings has no switch for it. What Android does
+    on its own is <strong>back up apps</strong>. If <em>Backup by Google
+    One</em> (or your phone maker’s equivalent) is turned on in the phone’s
+    settings, Android may copy Word Garner’s private storage — your
+    vocabulary, settings and the app’s own backups — to <em>your</em> Google
+    account, and restore it on a new phone; it moves the same data when you
+    transfer to a new phone directly. That is Android’s backup, under
+    <a href="https://policies.google.com/privacy">Google’s privacy policy</a>,
+    and you turn it on or off for the whole phone. Word Garner has no server
+    in this path and cannot read it. The dictionary packs are left out of
+    it, because they can be downloaded again. To move your words by hand
+    instead, export them from Settings.
+  </p>
+
   <h3>Dictionary packs (when you ask for one)</h3>
   <p>
     Word Garner can show a word's gender, its irregular forms and how it is
@@ -297,7 +319,8 @@
     There is no other network activity. Word Garner does not check in and does
     not report usage. With your language models downloaded, any dictionary
     packs you wanted already fetched, nobody signed in and iCloud sync off,
-    it works entirely offline.
+    it works entirely offline. (Android’s own backup, <a href="#android">above</a>,
+    is the phone’s doing, not the app’s.)
   </p>
 
   <h2>Notifications</h2>
@@ -364,7 +387,8 @@
       uninstall the app to remove everything on the device, including backups.
       If you used iCloud sync, Settings ▸ Data ▸ <em>Remove from iCloud</em>
       deletes the iCloud copy, and backups in iCloud Drive are deleted in the
-      Files app.</li>
+      Files app. On Android, a copy in the phone’s own backup is managed in
+      your Google account.</li>
     <li><strong>Delete the account</strong> — if you signed in, Settings ▸
       Account ▸ Delete account removes everything our service holds and
       revokes the sign-in, without writing to anybody.</li>
