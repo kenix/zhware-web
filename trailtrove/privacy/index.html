@@ -46,6 +46,7 @@
       <tr><td>Maps, place names, map search</td><td>Apple</td><td>Google</td></tr>
       <tr><td>Swiss maps, trails, place names, heights, stops</td><td colspan="2">swisstopo (geo.admin.ch)</td></tr>
       <tr><td>Routes outside Switzerland</td><td colspan="2">Waymarked Trails</td></tr>
+      <tr><td>Topographic map outside Switzerland, if you pick it</td><td colspan="2">OpenTopoMap</td></tr>
       <tr><td>Huts, water and other places</td><td colspan="2">GitHub: the area’s file, never your position</td></tr>
       <tr><td>Backup of your trails</td><td>device backup; your iCloud Drive if you turn it on</td><td>your Google account backup; a folder if you pick one</td></tr>
       <tr><td>Workouts, with your permission</td><td>Health</td><td>Health Connect</td></tr>
@@ -111,10 +112,14 @@
       <li><strong>Waymarked Trails</strong>, outside Switzerland and near its border, when you turn on hiking, cycling
       or mountain bike routes or pistes: map tiles from <code>tile.waymarkedtrails.org</code>, and when you tap the map,
       the routes in the tapped area from <code>hiking.waymarkedtrails.org</code> (and its cycling, mtb and slopes
-      siblings). A route’s page opens there in Safari’s view only if you choose it. Waymarked Trails receives the
-      requested map area and your device’s IP address, under its
+      siblings), and for each route listed its length. A route’s page opens there in Safari’s view only if you choose it. Waymarked Trails receives the
+      requested map area or route and your device’s IP address, under its
       <a href="https://hiking.waymarkedtrails.org/#help-about">terms</a>.</li>
-      <li><strong>GitHub</strong>, for huts, drinking water, shelters, campsites and viewpoints: a list of the available
+      <li><strong>OpenTopoMap</strong>, outside Switzerland, only when you pick the Topo map: map tiles from
+      <code>tile.opentopomap.org</code>, while you look at the map; they are never saved for offline use. The request
+      names the app; OpenTopoMap receives the requested map area and your device’s IP address, under its
+      <a href="https://opentopomap.org/about">terms</a>.</li>
+      <li><strong>GitHub</strong>, for huts, drinking water, shelters, campsites, viewpoints, toilets and passes: a list of the available
       place files from <code>kenix.github.io</code>, and the file for the 5° × 5° area under the map from
       <code>github.com</code> (release downloads), once per area and again after an update. The request names the area’s
       file, never your position; GitHub receives it and your device’s IP address, under the
@@ -127,7 +132,7 @@
     privacy terms; Trail Trove copies no weather data. Camping opens the country’s source page the same way; at a Swiss
     point, a protected area’s object sheet opens too, only if you choose it. Trail Trove keeps no camping rules.</p>
     <p>Map tiles you viewed or saved for offline use are kept on your iPhone. Trail Trove sends nothing else to anyone.
-    Swiss maps, hiking trails, paths, heights and place names: ©swisstopo; stops: ©BAV; departures: opentransportdata.swiss; addresses: ©BFS; SchweizMobil routes: ©ASTRA and the cantons; snowshoe and ski tours: SAC; wildlife rest zones: BAFU. Routes outside Switzerland, and pistes: ©OpenStreetMap contributors, Waymarked Trails. Huts, water, shelters, campsites and viewpoints: ©OpenStreetMap contributors (ODbL).</p>
+    Swiss maps, hiking trails, paths, heights and place names: ©swisstopo; stops: ©BAV; departures: opentransportdata.swiss; addresses: ©BFS; SchweizMobil routes: ©ASTRA and the cantons; snowshoe and ski tours: SAC; wildlife rest zones: BAFU. Routes outside Switzerland, and pistes: ©OpenStreetMap contributors, Waymarked Trails. Topo map outside Switzerland: ©OpenStreetMap contributors, SRTM; map style ©OpenTopoMap (CC BY-SA). Huts, water, shelters, campsites, viewpoints, toilets and passes: ©OpenStreetMap contributors (ODbL).</p>
 
     <h2>Apple Watch</h2>
     <p>The iPhone and the Watch exchange the current values and trail commands directly through Apple’s
@@ -153,7 +158,7 @@
       <li><strong>Maps and search</strong>: the Map and Satellite maps come from Google Maps (Google receives the map
       area and your device’s IP address, under <a href="https://policies.google.com/privacy">Google’s privacy
       policy</a>); place names and map search use the Android geocoder, which may use a Google service and then
-      receives the coordinate or the typed text. swisstopo, Waymarked Trails and GitHub are used as described above.</li>
+      receives the coordinate or the typed text. swisstopo, Waymarked Trails, OpenTopoMap and GitHub are used as described above.</li>
       <li><strong>Location</strong>: only while the app is in use; it asks for no background location. A trail keeps
       recording with the screen off through a foreground service, which shows a notification for as long as it
       records.</li>
@@ -203,6 +208,7 @@
       <tr><td>Karten, Ortsnamen, Kartensuche</td><td>Apple</td><td>Google</td></tr>
       <tr><td>Schweizer Karten, Wanderwege, Ortsnamen, Höhen, Haltestellen</td><td colspan="2">swisstopo (geo.admin.ch)</td></tr>
       <tr><td>Routen ausserhalb der Schweiz</td><td colspan="2">Waymarked Trails</td></tr>
+      <tr><td>Topografische Karte ausserhalb der Schweiz, wenn du sie wählst</td><td colspan="2">OpenTopoMap</td></tr>
       <tr><td>Hütten, Wasser und andere Orte</td><td colspan="2">GitHub: die Datei des Gebiets, nie deine Position</td></tr>
       <tr><td>Backup deiner Trails</td><td>Geräte-Backup; dein iCloud Drive, wenn du es einschaltest</td><td>Backup in deinem Google-Konto; ein Ordner, wenn du einen wählst</td></tr>
       <tr><td>Trainings, mit deiner Erlaubnis</td><td>Health</td><td>Health Connect</td></tr>
@@ -273,10 +279,14 @@
       <li><strong>Waymarked Trails</strong>, ausserhalb der Schweiz und nahe ihrer Grenze, wenn du Wander-, Velo- oder
       Mountainbikerouten oder Pisten einschaltest: Kartenkacheln von <code>tile.waymarkedtrails.org</code>, und wenn du
       auf die Karte tippst, die Routen dort von <code>hiking.waymarkedtrails.org</code> (und den Geschwistern cycling,
-      mtb und slopes). Die Seite einer Route öffnet sich dort nur auf deine Wahl in der Safari-Ansicht. Waymarked Trails erhält den
-      angefragten Kartenausschnitt und die IP-Adresse deines Geräts, gemäss seinen
+      mtb und slopes), und für jede aufgelistete Route ihre Länge. Die Seite einer Route öffnet sich dort nur auf deine Wahl in der Safari-Ansicht. Waymarked Trails erhält den
+      angefragten Kartenausschnitt oder die Route und die IP-Adresse deines Geräts, gemäss seinen
       <a href="https://hiking.waymarkedtrails.org/#help-about">Bedingungen</a>.</li>
-      <li><strong>GitHub</strong>, für Hütten, Trinkwasser, Unterstände, Campingplätze und Aussichtspunkte: eine Liste der
+      <li><strong>OpenTopoMap</strong>, ausserhalb der Schweiz, nur wenn du die Topo-Karte wählst: Kartenkacheln von
+      <code>tile.opentopomap.org</code>, während du die Karte ansiehst; sie werden nie für die Offline-Nutzung gespeichert. Die
+      Anfrage nennt die App; OpenTopoMap erhält den angefragten Kartenausschnitt und die IP-Adresse deines Geräts, gemäss seinen
+      <a href="https://opentopomap.org/about">Bedingungen</a>.</li>
+      <li><strong>GitHub</strong>, für Hütten, Trinkwasser, Unterstände, Campingplätze, Aussichtspunkte, Toiletten und Pässe: eine Liste der
       verfügbaren Ortsdateien von <code>kenix.github.io</code> und die Datei für das 5° × 5°-Gebiet unter der Karte von
       <code>github.com</code> (Release-Downloads), einmal pro Gebiet und wieder nach einer Aktualisierung. Die Anfrage nennt die
       Datei des Gebiets, nie deine Position; GitHub erhält sie und die IP-Adresse deines Geräts, gemäss der
@@ -290,7 +300,7 @@
     Lands gleich; an einer Stelle in der Schweiz auch das Objektblatt eines Schutzgebiets, nur auf deine Wahl. Trail Trove
     speichert keine Campier-Regeln.</p>
     <p>Kartenkacheln, die du angesehen oder für die Offline-Nutzung gespeichert hast, bleiben auf deinem iPhone. Sonst
-    sendet Trail Trove nichts an niemanden. Schweizer Karten, Wanderwege, Wege, Höhen und Ortsnamen: ©swisstopo; Haltestellen: ©BAV; Abfahrten: opentransportdata.swiss; Adressen: ©BFS; SchweizMobil-Routen: ©ASTRA und Kantone; Schneeschuh- und Skitouren: SAC; Wildruhezonen: BAFU. Routen ausserhalb der Schweiz und Pisten: ©OpenStreetMap-Mitwirkende, Waymarked Trails. Hütten, Wasser, Unterstände, Campingplätze und Aussichtspunkte: ©OpenStreetMap-Mitwirkende (ODbL).</p>
+    sendet Trail Trove nichts an niemanden. Schweizer Karten, Wanderwege, Wege, Höhen und Ortsnamen: ©swisstopo; Haltestellen: ©BAV; Abfahrten: opentransportdata.swiss; Adressen: ©BFS; SchweizMobil-Routen: ©ASTRA und Kantone; Schneeschuh- und Skitouren: SAC; Wildruhezonen: BAFU. Routen ausserhalb der Schweiz und Pisten: ©OpenStreetMap-Mitwirkende, Waymarked Trails. Topo-Karte ausserhalb der Schweiz: ©OpenStreetMap-Mitwirkende, SRTM; Kartenstil ©OpenTopoMap (CC BY-SA). Hütten, Wasser, Unterstände, Campingplätze, Aussichtspunkte, Toiletten und Pässe: ©OpenStreetMap-Mitwirkende (ODbL).</p>
 
     <h2>Apple Watch</h2>
     <p>iPhone und Watch tauschen die aktuellen Werte und Trail-Befehle direkt über Apples WatchConnectivity aus,
@@ -320,7 +330,7 @@
       den Kartenausschnitt und die IP-Adresse deines Geräts, gemäss der
       <a href="https://policies.google.com/privacy?hl=de">Datenschutzerklärung von Google</a>); Ortsnamen und die
       Kartensuche nutzen den Android-Geocoder, der einen Google-Dienst nutzen kann, der dann die Koordinate oder den
-      eingetippten Text erhält. swisstopo, Waymarked Trails und GitHub werden wie oben beschrieben genutzt.</li>
+      eingetippten Text erhält. swisstopo, Waymarked Trails, OpenTopoMap und GitHub werden wie oben beschrieben genutzt.</li>
       <li><strong>Standort</strong>: nur während du die App nutzt; sie fragt nicht nach dem Standort im Hintergrund.
       Ein Trail zeichnet bei ausgeschaltetem Bildschirm über einen Vordergrunddienst weiter auf, der dabei die ganze
       Zeit eine Mitteilung zeigt.</li>
