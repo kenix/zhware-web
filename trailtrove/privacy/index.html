@@ -22,6 +22,12 @@
     p, li { margin: .4rem 0; }
     .muted { color: var(--muted); font-size: .92rem; }
     section + section { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 2rem; }
+    .short { background: var(--cream); color: #1b1b1b; border-radius: 12px; padding: .9rem 1.1rem; margin: 1rem 0 1.5rem; }
+    .short a { color: #14324A; }
+    @media (prefers-color-scheme: dark) { .short { background: #10263a; color: var(--fg); } .short a { color: var(--gold); } }
+    .short table { border-collapse: collapse; width: 100%; font-size: .93rem; margin: .5rem 0; }
+    .short th, .short td { text-align: left; vertical-align: top; padding: .3rem .5rem .3rem 0; border-top: 1px solid rgba(127,127,127,.25); }
+    .short th { border-top: none; font-weight: 600; }
     footer { margin-top: 3rem; font-size: .9rem; color: var(--muted); }
   </style>
 </head>
@@ -30,9 +36,23 @@
     <header><a href="/trailtrove/"><img src="/trailtrove/favicon.svg" alt="Trail Trove"></a><strong>Trail Trove</strong><nav class="lang"><a href="#en">English</a> · <a href="#de">Deutsch</a></nav></header>
     <section id="en" lang="en">
     <h1>Privacy policy</h1>
-    <p class="muted">Effective 5 November 2026</p>
+    <p class="muted">Effective 15 November 2026</p>
+    <div class="short">
     <p><strong>In short:</strong> Trail Trove keeps your data on your device. There are no accounts, no analytics, no
-    ads and no tracking, and the developer receives nothing from the app.</p>
+    ads and no tracking, and the developer receives nothing from the app. What leaves the device, and only when you use
+    the feature:</p>
+    <table>
+      <tr><th></th><th>iPhone</th><th>Android</th></tr>
+      <tr><td>Maps, place names, map search</td><td>Apple</td><td>Google</td></tr>
+      <tr><td>Swiss maps, trails, place names, heights, stops</td><td colspan="2">swisstopo (geo.admin.ch)</td></tr>
+      <tr><td>Routes outside Switzerland</td><td colspan="2">Waymarked Trails</td></tr>
+      <tr><td>Huts, water and other places</td><td colspan="2">GitHub: the area’s file, never your position</td></tr>
+      <tr><td>Backup of your trails</td><td>device backup; your iCloud Drive if you turn it on</td><td>your Google account backup; a folder if you pick one</td></tr>
+      <tr><td>Workouts, with your permission</td><td>Health</td><td>Health Connect</td></tr>
+    </table>
+    <p>Pages you choose to open (weather, timetables, route pages) load in a browser view inside the app, under the
+    site’s own terms. The details follow.</p>
+    </div>
     <p>This policy covers Trail Trove for iPhone and Apple Watch and for Android phones and Wear OS watches. It
     describes the iPhone app; <a href="#android">Android</a> lists where the Android app differs.</p>
 
@@ -41,6 +61,8 @@
     settings are stored on your iPhone, shared only with Trail Trove’s own widget and Watch app. Like any app data,
     they are part of your device backup. Photos are not copied: a trail stores only a reference to photos you took
     during it, and the ones you hid.</p>
+    <p>If you turn on Backup in Settings, a copy of each finished trail is written to your iCloud Drive (“Trail Trove”
+    in Files), under <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>. It is off by default.</p>
 
     <h2>Permissions</h2>
     <ul>
@@ -171,9 +193,23 @@
 
     <section id="de" lang="de">
     <h1>Datenschutzerklärung</h1>
-    <p class="muted">Gültig ab 5. November 2026</p>
+    <p class="muted">Gültig ab 15. November 2026</p>
+    <div class="short">
     <p><strong>Kurz:</strong> Trail Trove behält deine Daten auf deinem Gerät. Es gibt keine Konten, keine Analyse,
-    keine Werbung und kein Tracking, und der Entwickler erhält nichts von der App.</p>
+    keine Werbung und kein Tracking, und der Entwickler erhält nichts von der App. Was das Gerät verlässt, und nur
+    wenn du die Funktion nutzt:</p>
+    <table>
+      <tr><th></th><th>iPhone</th><th>Android</th></tr>
+      <tr><td>Karten, Ortsnamen, Kartensuche</td><td>Apple</td><td>Google</td></tr>
+      <tr><td>Schweizer Karten, Wanderwege, Ortsnamen, Höhen, Haltestellen</td><td colspan="2">swisstopo (geo.admin.ch)</td></tr>
+      <tr><td>Routen ausserhalb der Schweiz</td><td colspan="2">Waymarked Trails</td></tr>
+      <tr><td>Hütten, Wasser und andere Orte</td><td colspan="2">GitHub: die Datei des Gebiets, nie deine Position</td></tr>
+      <tr><td>Backup deiner Trails</td><td>Geräte-Backup; dein iCloud Drive, wenn du es einschaltest</td><td>Backup in deinem Google-Konto; ein Ordner, wenn du einen wählst</td></tr>
+      <tr><td>Trainings, mit deiner Erlaubnis</td><td>Health</td><td>Health Connect</td></tr>
+    </table>
+    <p>Seiten, die du öffnest (Wetter, Fahrpläne, Routenseiten), laden in einer Browser-Ansicht in der App, gemäss den
+    Bestimmungen der jeweiligen Website. Die Einzelheiten folgen.</p>
+    </div>
     <p>Diese Erklärung gilt für Trail Trove auf iPhone und Apple Watch und auf Android-Telefonen und Wear-OS-Uhren. Sie
     beschreibt die iPhone-App; unter <a href="#android-de">Android</a> steht, worin die Android-App abweicht.</p>
 
@@ -182,6 +218,9 @@
     Einstellungen werden auf deinem iPhone gespeichert und nur mit dem eigenen Widget und der Watch-App von Trail
     Trove geteilt. Wie alle App-Daten sind sie Teil deines Geräte-Backups. Fotos werden nicht kopiert: Ein Trail
     speichert nur einen Verweis auf die Fotos, die du währenddessen aufgenommen hast, und welche du ausgeblendet hast.</p>
+    <p>Schaltest du in den Einstellungen «Backup» ein, wird eine Kopie jedes beendeten Trails in dein iCloud Drive
+    geschrieben («Trail Trove» in Dateien), gemäss der <a href="https://www.apple.com/legal/privacy/de-ww/">Datenschutzrichtlinie
+    von Apple</a>. Standardmässig ist es aus.</p>
 
     <h2>Berechtigungen</h2>
     <ul>
