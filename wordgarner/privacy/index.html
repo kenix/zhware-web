@@ -28,7 +28,7 @@
 <main class="wrap">
 
   <h1>Privacy policy</h1>
-  <p class="updated">Last updated 15 November 2026. Applies to the Word Garner
+  <p class="updated">Last updated 16 November 2026. Applies to the Word Garner
     mobile app (<code>org.zhware.wordgarner</code>) for iOS and Android, and to
     this website.</p>
 
@@ -39,13 +39,16 @@
       or tracking, and no analytics in the app. Words are translated on the phone itself. Three
       things can ever leave your device, and you ask for each of them: text
       you asked Lexis, Word Garner’s own small service, about — only if you
-      sign in; a dictionary file you chose to download, which is public
+      sign in or try it without an account; a dictionary file you chose to download, which is public
       data and carries nothing about you; and your vocabulary, to <em>your
       own</em> iCloud — only on iPhone or iPad, only if you turn on iCloud
       sync, and never to us. (On Android, the phone’s own backup to your
       Google account may include the app’s data, if you have it turned on;
-      that is Android’s, not ours, and never reaches us either.) <strong>If you never sign in, we store nothing about
-      you whatsoever.</strong> If you do, we store an anonymous identifier
+      that is Android’s, not ours, and never reaches us either.) <strong>If you never sign in and never try Lexis, we
+      store nothing about you.</strong> If you <a href="#trial">try it
+      without an account</a>, we keep a count of your free tries under a
+      random number that names nobody, deleted 90 days after you last use
+      it. If you sign in, we store an anonymous identifier
       and how many requests it made today — and, if you signed up with an
       email address rather than Apple or Google, a one-way hash of that
       address and of your password — and you can delete all of it from
@@ -84,12 +87,17 @@
       in the iOS Keychain or the Android encrypted preference store. Earlier
       versions of the app could hold an API key of yours there; the current
       version deletes any such key the first time it starts.</li>
+    <li><strong>Your free tries</strong>, if you <a href="#trial">try Lexis
+      without an account</a> — the random number Lexis gave this phone, in
+      the same secure store, and a note once the free tries are used up.</li>
   </ul>
   <p>
     Word Garner does not collect your name, email address, phone number, contacts,
-    photos, location, advertising identifier or device identifier. The one
-    exception is an email address you choose to sign up with, described
-    <a href="#hosted">below</a>. It contains
+    photos, location or advertising identifier, and reads no identifier from
+    the phone or its hardware. The two exceptions are an email address you
+    choose to sign up with, described <a href="#hosted">below</a>, and the
+    random number Lexis gives a phone that <a href="#trial">tries it without
+    an account</a>. It contains
     no analytics, crash-reporting or advertising SDK.
   </p>
 
@@ -105,11 +113,12 @@
     device.
   </p>
 
-  <h3 id="hosted">Lexis, Word Garner’s own service (only if you sign in)</h3>
+  <h3 id="hosted">Lexis, Word Garner’s own service (only if you sign in or try it)</h3>
   <p>
     Pronunciations, explanations and example sentences, and a translation the
     device could not make, come from Lexis, Word Garner’s own service, if you
-    sign in and ask for them. There is no other way to them: the app no
+    sign in, or <a href="#trial">try it without an account</a>, and ask for
+    them. There is no other way to them: the app no
     longer takes an API key of your own. This is <strong>optional</strong>, you
     are asked about it once — at the moment you tap something that needs it —
     and declining leaves every other part of the app exactly as it was.
@@ -207,11 +216,13 @@
     accounts and words are counted in a form that cannot be read back into
     them — kept for four days and emailed to us once a day. Whether a
     sign-in is a new account is checked against a running count of the same
-    kind, which is kept. No device is counted, because the service is never
-    told which device you use. <strong>On a day the service reaches its
+    kind, which is kept. No device is counted. Free tries are counted only as
+    totals — how many were started, how many answers they got and how many
+    were used up — never by their random number. <strong>On a day the service reaches its
     spending limit</strong>, that email also names the five accounts that
     asked the most, by the first four characters of their anonymous
-    identifier, so we can tell a fault from misuse.</p>
+    identifier, so we can tell a fault from misuse. Free tries are never among
+    them.</p>
   <p><strong>The spending limit.</strong> The service has a daily limit on
     what it may spend, so a fault or misuse cannot run up costs. When it is
     reached, Lexis pauses for everybody until midnight UTC, and Settings ▸
@@ -231,6 +242,39 @@
     Signing out, in the same place, ends the session on that phone and leaves
     the account alone.
   </p>
+
+  <h3 id="trial">Trying Lexis without an account</h3>
+  <p>
+    The sheet that asks you to sign in also offers <em>Try it first</em>: a
+    few words’ worth of Lexis, once per phone, with no account. Tapping it is
+    the choice. Nothing below happens until you do, and everything else in
+    Word Garner works without it.
+  </p>
+  <p><strong>What it keeps.</strong> When you tap it, Lexis makes up a random
+    number and hands it to the app inside a signed token. The number is not
+    taken from the phone, its hardware or its advertising identifier, and is
+    linked to nothing. The app keeps the token in the phone’s secure storage
+    (the iOS Keychain or the Android encrypted preference store) and sends it
+    with each free request, so Lexis can count how many free tries the phone
+    has used. Lexis keeps that count under the number and nothing else: no
+    name, no address, no account. It is deleted on its own 90 days after the
+    phone last used it.</p>
+  <p><strong>When you sign in</strong>, the app deletes the number, and the
+    count is never joined to your account. On iPhone the number usually stays
+    in the Keychain if you delete and reinstall the app, which is why a
+    reinstall does not hand out new free tries; on Android a reinstall makes
+    a new one. Once the free tries are used up, or you sign in, the app keeps
+    a note of it on the phone; that note never leaves the phone.</p>
+  <p><strong>Your internet address.</strong> So that one network cannot make
+    up endless numbers, Lexis counts how many are made from one internet
+    address in a day (for IPv6, the first half of the address, which a
+    household or office shares). It keeps a keyed one-way scramble of the
+    address, never the address itself, and deletes it after one day.</p>
+  <p><strong>What you ask</strong> during the free tries is handled exactly
+    like a signed-in request: the same text goes to OpenAI with nothing that
+    identifies you, and the log line carries the random number where it
+    would carry the anonymous identifier. The free tries appear in the
+    <a href="#hosted">daily totals</a> only as counts.</p>
 
   <h3 id="icloud">iCloud sync and iCloud Drive backup (iPhone and iPad, only if you turn them on)</h3>
   <p>
@@ -374,8 +418,9 @@
   <h2>Children</h2>
   <p>
     Word Garner is not directed at children under 13 and does not knowingly
-    collect any information from them. Since the app collects no personal data
-    at all, there is nothing held about any user of any age.
+    collect any information from them. Without an account or the free tries,
+    nothing is held about any user of any age, and what either holds is
+    described above.
   </p>
 
   <h2>Your data, your control</h2>
@@ -393,13 +438,50 @@
     <li><strong>Delete the account</strong> — if you signed in, Settings ▸
       Account ▸ Delete account removes everything our service holds and
       revokes the sign-in, without writing to anybody.</li>
+    <li><strong>The free tries</strong> — their count deletes itself 90 days
+      after the phone last used Lexis, or sooner on request to
+      <a href="mailto:app.support@zhware.org">app.support@zhware.org</a>.</li>
   </ul>
   <p>
-    Unless you signed in, we hold no data about you at all, so there is nothing
+    Unless you signed in or tried Lexis, we hold no data about you at all, so there is nothing
     for us to hand over, correct or erase on request. If you did sign in, what
     we hold is an anonymous identifier and a daily counter — plus, for an
     email account, the hashed address and password — and the delete button
-    above removes all of it; you are welcome to write to us instead.
+    above removes all of it; you are welcome to write to us instead. If you
+    tried Lexis without an account, we hold a count under a random number
+    that names nobody.
+  </p>
+
+  <h2 id="retention">How long, and why</h2>
+  <ul>
+    <li><strong>Account</strong> — the anonymous identifier, and for an email
+      account the hashed address and password: until you delete the
+      account.</li>
+    <li><strong>Daily allowance counter</strong> — two days.</li>
+    <li><strong>Free tries’ count</strong> — 90 days after the phone last
+      used Lexis.</li>
+    <li><strong>Scrambled internet address</strong> — one day.</li>
+    <li><strong>Confirmation and reset codes</strong> — 15 minutes;
+      <strong>attempt counters</strong> — within a day.</li>
+    <li><strong>Daily totals</strong> — four days; the running count of new
+      accounts is kept.</li>
+    <li><strong>Support mail</strong> — until the matter is closed.</li>
+  </ul>
+  <p>
+    Under the GDPR and the Swiss data protection act, answering what you ask
+    Lexis rests on providing the service you asked for (GDPR Art. 6(1)(b)).
+    The free tries’ count, the scrambled address, the allowance and attempt
+    counters, the log digests and the daily totals rest on our legitimate
+    interest in preventing abuse and keeping the service working (Art.
+    6(1)(f)). Support mail is used to answer you.
+  </p>
+  <p>
+    You may ask what we hold about you, have it corrected or deleted, and
+    object to what rests on legitimate interest: write to
+    <a href="mailto:app.support@zhware.org">app.support@zhware.org</a>. You
+    may also complain to a data protection authority: in Switzerland the
+    FDPIC (<a href="https://www.edoeb.admin.ch/">edoeb.admin.ch</a>), in the
+    EU the authority where you live or work.
   </p>
 
   <h2>What might change, and what would not</h2>
