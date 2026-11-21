@@ -24,7 +24,8 @@ Each page is self-contained: inline `<style>`, system font stack, light and dark
 - English and German for every page. Keep the two versions in sync.
 - **The privacy policy must state what the app actually does**, nothing more, nothing less: the controller split
   (club controls its members' data, zhware processes it; zhware controls only the account email and sign-in), the data
-  kept, the position on the water, Fly.io, Neon and Resend, swisstopo tiles as the only request from the device,
+  kept, the position on the water, Fly.io, Neon, Resend and GitHub (US companies, standard contractual clauses), swisstopo tiles in
+  Switzerland and OpenStreetMap tiles elsewhere as the only requests from the device, members aged 16 and over,
   weather and storm warning fetched by the server, no ads, no tracking. When the app's behaviour changes (see
   `../../apps/crewbook/docs/PLAN.md`), change the policy in the same piece of work, with a new date.
 - **The agreement page is pending.** The Crewbook agreement (terms of use plus data processing, which a club accepts

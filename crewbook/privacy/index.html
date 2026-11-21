@@ -30,7 +30,7 @@
     <header><a href="/crewbook/"><img src="/crewbook/favicon.svg" alt="Crewbook"></a><strong>Crewbook</strong><nav class="lang"><a href="#en">English</a> · <a href="#de">Deutsch</a></nav></header>
     <section id="en" lang="en">
     <h1>Privacy policy</h1>
-    <p class="muted">Last updated 17 November 2026</p>
+    <p class="muted">Last updated 21 November 2026</p>
     <p><strong>In short:</strong> Crewbook is a rowing club’s app. Your club decides what is recorded about you; zhware
     runs the service for the club. There are no ads, no tracking and no analytics.</p>
 
@@ -43,9 +43,11 @@
     <h2>What is stored</h2>
     <ul>
       <li><strong>Account</strong>: your email address, used to sign in with a one-time code (no password), and your
-      sessions.</li>
+      sessions; a session ends after 180 days without use. If your club invites you, your email address is stored with
+      the invitation before you first sign in.</li>
       <li><strong>Profile</strong>: your name; optionally a phone number, which the members of your club can see so a
-      crew can call before taking a boat.</li>
+      crew can call before taking a boat; and what your club records about you as a member: qualifications and when they
+      expire, functions, member category and joining date.</li>
       <li><strong>Who sees your email address</strong>: the club’s member administrators. Your club’s members, and its
       board at the boathouse, see it only while you hold a function the club lists under Board &amp; contacts. If the club
       pairs you with a mentor (Pate/Patin) as a new member, you and your mentor see each other’s email address for as long
@@ -53,10 +55,11 @@
       <li><strong>Photo</strong> (optional): a profile photo, only after you consent to show it to your club. One photo,
       replaced in place; no older versions are served. It is deleted when you remove it or when you are deactivated in the
       club. A copy can survive for up to 30 days in encrypted backups and the database’s restore window.</li>
-      <li><strong>Club activity</strong>: your bookings, trips, distances and the ranking they feed. Damage reports, with
-      photos, are kept until the report is closed.</li>
+      <li><strong>Club activity</strong>: your bookings, trips, distances and the ranking they feed. A trip records
+      its crew, guests by name. Damage reports and their photos stay in the club’s record after the report is closed; the
+      photos are deleted when the boat leaves the club.</li>
       <li><strong>Club news</strong>: which announcements you have opened, so every device shows the same unread count.
-      Whoever posts news sees only how many members have read an announcement, never who.</li>
+      Whoever posts news sees how many members have read an announcement, and who has not yet.</li>
       <li><strong>Sign-ups</strong> (if an announcement asks for them): which options you sign up for and when. Everyone the
       announcement is meant for sees who is on the list, in which order and since when; whoever posts news in your club
       also sees who withdrew and when, and can export the list. If the sign-up has a fee, whoever posts news can mark
@@ -72,8 +75,7 @@
     </ul>
 
     <h2>Position on the water</h2>
-    <p>Only while a trip is on the water, and only if you opted in (a junior only with a parent’s consent), your watch or
-    phone sends its latest position about once a minute. It is shown only on your club’s board at the boathouse. Only the
+    <p>Only while a trip is on the water, and only if you opted in, your Apple Watch sends its latest position about once a minute. It is shown only on your club’s board at the boathouse. Only the
     last position is kept, and it is deleted when the trip ends. No tracks are stored. Without your opt-in, the watch
     records the workout for Health only.</p>
 
@@ -84,23 +86,31 @@
 
     <h2>Where it runs</h2>
     <ul>
-      <li><strong>Fly.io</strong> (Frankfurt): the server.</li>
+      <li><strong>Fly.io</strong> (Frankfurt): the server, and its log of requests (time, path and response; no names
+      or email addresses).</li>
       <li><strong>Neon</strong> (Postgres, Frankfurt, eu-central-1): the database.</li>
-      <li><strong>Resend</strong>: sends the sign-in emails.</li>
+      <li><strong>Resend</strong>: sends the sign-in and deletion codes, invitations and notices about the club’s plan.</li>
+      <li><strong>GitHub</strong>: keeps the nightly encrypted backup of the database for 30 days.</li>
     </ul>
+    <p>All four are US companies. The server and the database run in Frankfurt; Resend and GitHub process in the USA.
+    Transfers to the USA are covered by the standard contractual clauses in each provider’s data processing
+    agreement.</p>
 
     <h2>Requests from your device</h2>
-    <p>The map loads tiles from <strong>swisstopo</strong>; swisstopo therefore receives the requested map area and your
-    device’s IP address, under the
-    <a href="https://www.geo.admin.ch/en/general-terms-of-use-fsdi">terms of use of geo.admin.ch</a>. Weather and the storm
-    warning are fetched by the server, not by your device: Open-Meteo for the forecast and the Kantonspolizei Zürich
-    (<code>zh.stwarn.ch</code>) for the storm warning. Your device sends nothing to them.</p>
+    <p>In Switzerland the map’s tiles and the lake outlines come from <strong>swisstopo</strong>, under the
+    <a href="https://www.geo.admin.ch/en/general-terms-of-use-fsdi">terms of use of geo.admin.ch</a>; elsewhere the tiles
+    come from <strong>OpenStreetMap</strong> (OpenStreetMap Foundation, UK). Either receives the requested map area and
+    your device’s IP address. Weather, storm warnings, wind and water levels are fetched by the server, not by your
+    device, from public services for the club’s region, such as Open-Meteo, the cantonal storm warnings
+    (<code>stwarn.ch</code>) and the Federal Office for the Environment; the water map comes from GitHub. Only the
+    boathouse’s location is sent to them.</p>
 
     <h2>On your phone</h2>
     <p>The phone keeps a local copy of your club’s data so the app works offline at the boathouse. It is deleted when you
     sign out. Writes made offline wait in a queue and go to the server later.</p>
     <p>Crewbook in a web browser keeps your club’s data only in memory, and your sign-in only in that browser tab: both
-    are gone when you close the tab or sign out. The browser remembers your chosen language. No cookies are set.</p>
+    are gone when you close the tab or sign out. The browser remembers your chosen language. The boathouse board’s browser keeps its pairing key until
+    the club revokes the board’s link. No cookies are set.</p>
 
     <h2>Ads and tracking</h2>
     <p>None. Crewbook has no ads, no tracking and no analytics.</p>
@@ -116,16 +126,29 @@
     the club with everything in it at once: members, boats, bookings, trips, news, duties and photos. Accounts that belong
     to no other club are deleted with it. Backups follow the 30-day limit above.</p>
 
+    <h2>Age</h2>
+    <p>Crewbook is for members aged 16 and over. A club that wants a younger member in the app obtains the parents’
+    consent first.</p>
+
+    <h2>Legal bases</h2>
+    <p>The club processes its members’ data to run the membership and in its legitimate interest in organising rowing
+    (GDPR Art. 6(1)(b) and (f)); zhware runs your account to provide the service you signed up for (Art. 6(1)(b)) and
+    keeps the server’s log and backups in its legitimate interest in a secure, working service (Art. 6(1)(f)). Your photo
+    and your position on the water are shown only with your consent (Art. 6(1)(a)); you withdraw it by removing the photo
+    or switching off “Share position from the watch” in Club → My profile.</p>
+
     <h2>Your rights and contact</h2>
     <p>Under the Swiss Federal Act on Data Protection (nDSG) and, where it applies, the GDPR, you may ask for access,
-    correction, deletion, and to restrict or object to processing. For data a club controls, the club answers; we help it
+    correction, deletion, a copy of your data in a portable format, and to restrict or object to processing. You may
+    also complain to the Swiss Federal Data Protection and Information Commissioner (FDPIC) or to the data protection
+    authority where you live in the EU. For data a club controls, the club answers; we help it
     to. Email <a href="mailto:app.support@zhware.org">app.support@zhware.org</a>. If the app’s handling of data changes,
     this page changes with it, with a new date.</p>
     </section>
 
     <section id="de" lang="de">
     <h1>Datenschutzerklärung</h1>
-    <p class="muted">Zuletzt aktualisiert am 17. November 2026</p>
+    <p class="muted">Zuletzt aktualisiert am 21. November 2026</p>
     <p><strong>Kurz:</strong> Crewbook ist die App eines Ruderclubs. Dein Club entscheidet, was über dich erfasst wird;
     zhware betreibt den Dienst für den Club. Es gibt keine Werbung, kein Tracking und keine Analyse.</p>
 
@@ -139,9 +162,11 @@
     <h2>Was gespeichert wird</h2>
     <ul>
       <li><strong>Konto</strong>: deine E-Mail-Adresse für die Anmeldung mit einem einmaligen Code (kein Passwort) und
-      deine Sitzungen.</li>
+      deine Sitzungen; eine Sitzung endet nach 180 Tagen ohne Nutzung. Lädt dich dein Club ein, wird deine E-Mail-Adresse
+      mit der Einladung gespeichert, bevor du dich zum ersten Mal anmeldest.</li>
       <li><strong>Profil</strong>: dein Name; optional eine Telefonnummer, die die Mitglieder deines Clubs sehen, damit
-      eine Crew anrufen kann, bevor sie ein Boot nimmt.</li>
+      eine Crew anrufen kann, bevor sie ein Boot nimmt; dazu, was dein Club über dich als Mitglied erfasst:
+      Qualifikationen und wann sie ablaufen, Funktionen, Mitgliederkategorie und Eintrittsdatum.</li>
       <li><strong>Wer deine E-Mail-Adresse sieht</strong>: die Mitgliederverwaltung des Clubs. Die Mitglieder deines
       Clubs und seine Tafel im Bootshaus sehen sie nur, solange du eine Funktion innehast, die der Club unter «Vorstand &amp;
       Kontakte» aufführt. Stellt dir der Club als neuem Mitglied einen Paten oder eine Patin zur Seite, seht ihr gegenseitig
@@ -152,9 +177,10 @@
       oder im Club deaktiviert wirst. Eine Kopie kann bis zu 30 Tage in verschlüsselten Backups und im Wiederherstellungs-
       fenster der Datenbank bestehen bleiben.</li>
       <li><strong>Club-Aktivität</strong>: deine Reservationen, Fahrten, Distanzen und die Rangliste, die daraus entsteht.
-      Schadenmeldungen samt Fotos werden bis zum Abschluss der Meldung aufbewahrt.</li>
+      Eine Fahrt hält ihre Crew fest, Gäste mit Namen. Schadenmeldungen und ihre Fotos bleiben nach dem Abschluss in der
+      Aufzeichnung des Clubs; die Fotos werden gelöscht, wenn das Boot den Club verlässt.</li>
       <li><strong>Club-News</strong>: welche Mitteilungen du geöffnet hast, damit jedes Gerät dieselbe Zahl ungelesener
-      zeigt. Wer News veröffentlicht, sieht nur, wie viele Mitglieder eine Mitteilung gelesen haben, nie wer.</li>
+      zeigt. Wer News veröffentlicht, sieht, wie viele Mitglieder eine Mitteilung gelesen haben und wer noch nicht.</li>
       <li><strong>Anmeldungen</strong> (wenn eine Mitteilung dazu einlädt): für welche Optionen du dich anmeldest und wann.
       Alle, für die die Mitteilung bestimmt ist, sehen, wer auf der Liste steht, in welcher Reihenfolge und seit wann; wer
       im Club News veröffentlicht, sieht zudem, wer sich abgemeldet hat und wann, und kann die Liste exportieren. Kostet die
@@ -170,8 +196,8 @@
     </ul>
 
     <h2>Position auf dem Wasser</h2>
-    <p>Nur solange eine Fahrt auf dem Wasser ist, und nur wenn du eingewilligt hast (Junioren nur mit Einwilligung der
-    Eltern), sendet deine Uhr oder dein Telefon etwa einmal pro Minute die letzte Position. Sie wird nur auf der Tafel
+    <p>Nur solange eine Fahrt auf dem Wasser ist, und nur wenn du eingewilligt hast, sendet deine Apple Watch etwa einmal pro
+    Minute die letzte Position. Sie wird nur auf der Tafel
     deines Clubs im Bootshaus angezeigt. Nur die letzte Position wird gespeichert und am Ende der Fahrt gelöscht. Es
     werden keine Spuren gespeichert. Ohne deine Einwilligung zeichnet die Uhr das Training nur für Health auf.</p>
 
@@ -182,17 +208,25 @@
 
     <h2>Wo es läuft</h2>
     <ul>
-      <li><strong>Fly.io</strong> (Frankfurt): der Server.</li>
+      <li><strong>Fly.io</strong> (Frankfurt): der Server und sein Protokoll der Anfragen (Zeit, Pfad und Antwort; keine
+      Namen oder E-Mail-Adressen).</li>
       <li><strong>Neon</strong> (Postgres, Frankfurt, eu-central-1): die Datenbank.</li>
-      <li><strong>Resend</strong>: versendet die Anmelde-E-Mails.</li>
+      <li><strong>Resend</strong>: versendet die Anmelde- und Löschcodes, Einladungen und Mitteilungen zum Plan des
+      Clubs.</li>
+      <li><strong>GitHub</strong>: bewahrt das nächtliche verschlüsselte Backup der Datenbank 30 Tage auf.</li>
     </ul>
+    <p>Alle vier sind US-Unternehmen. Server und Datenbank laufen in Frankfurt; Resend und GitHub verarbeiten in den
+    USA. Übermittlungen in die USA sind durch die Standardvertragsklauseln im Auftragsverarbeitungsvertrag des
+    jeweiligen Anbieters abgesichert.</p>
 
     <h2>Anfragen deines Geräts</h2>
-    <p>Die Karte lädt Kacheln von <strong>swisstopo</strong>; swisstopo erhält dabei den angefragten Kartenausschnitt und
-    die IP-Adresse deines Geräts, gemäss den
-    <a href="https://www.geo.admin.ch/de/nutzungsbedingungen-fsdi">Nutzungsbedingungen von geo.admin.ch</a>. Wetter und
-    Sturmwarnung holt der Server, nicht dein Gerät: Open-Meteo für die Vorhersage und die Kantonspolizei Zürich
-    (<code>zh.stwarn.ch</code>) für die Sturmwarnung. Dein Gerät sendet ihnen nichts.</p>
+    <p>In der Schweiz kommen die Kartenkacheln und die Seeumrisse von <strong>swisstopo</strong>, gemäss den
+    <a href="https://www.geo.admin.ch/de/nutzungsbedingungen-fsdi">Nutzungsbedingungen von geo.admin.ch</a>; anderswo
+    kommen die Kacheln von <strong>OpenStreetMap</strong> (OpenStreetMap Foundation, Grossbritannien). Beide erhalten
+    den angefragten Kartenausschnitt und die IP-Adresse deines Geräts. Wetter, Sturmwarnungen, Wind und Pegel holt der
+    Server, nicht dein Gerät, bei öffentlichen Diensten für die Region des Clubs, etwa Open-Meteo, den kantonalen
+    Sturmwarnungen (<code>stwarn.ch</code>) und dem Bundesamt für Umwelt; die Gewässerkarte kommt von GitHub. Ihnen wird
+    nur der Standort des Bootshauses übermittelt.</p>
 
     <h2>Auf deinem Telefon</h2>
     <p>Das Telefon hält eine lokale Kopie der Daten deines Clubs, damit die App im Bootshaus offline funktioniert. Sie
@@ -200,7 +234,8 @@
     Server.</p>
     <p>Crewbook im Webbrowser hält die Daten deines Clubs nur im Arbeitsspeicher und deine Anmeldung nur in diesem
     Browser-Tab: Beides ist weg, wenn du den Tab schliesst oder dich abmeldest. Der Browser merkt sich die gewählte
-    Sprache. Es werden keine Cookies gesetzt.</p>
+    Sprache. Der Browser der Tafel im Bootshaus behält seinen Kopplungsschlüssel, bis der Club den Link der Tafel
+    widerruft. Es werden keine Cookies gesetzt.</p>
 
     <h2>Werbung und Tracking</h2>
     <p>Keine. Crewbook hat keine Werbung, kein Tracking und keine Analyse.</p>
@@ -217,9 +252,23 @@
     Frondienste und Fotos. Konten, die zu keinem anderen Club gehören, werden mitgelöscht. Backups folgen der 30-Tage-Grenze
     oben.</p>
 
+    <h2>Alter</h2>
+    <p>Crewbook ist für Mitglieder ab 16 Jahren. Ein Club, der ein jüngeres Mitglied in der App haben will, holt vorher
+    die Einwilligung der Eltern ein.</p>
+
+    <h2>Rechtsgrundlagen</h2>
+    <p>Der Club bearbeitet die Daten seiner Mitglieder, um die Mitgliedschaft zu führen, und in seinem berechtigten
+    Interesse, das Rudern zu organisieren (DSGVO Art. 6 Abs. 1 lit. b und f); zhware führt dein Konto, um den Dienst zu
+    erbringen, für den du dich angemeldet hast (Art. 6 Abs. 1 lit. b), und hält das Server-Protokoll und die Backups in
+    seinem berechtigten Interesse an einem sicheren, funktionierenden Dienst (Art. 6 Abs. 1 lit. f). Dein Foto und deine
+    Position auf dem Wasser werden nur mit deiner Einwilligung gezeigt (Art. 6 Abs. 1 lit. a); du widerrufst sie, indem
+    du das Foto entfernst oder «Position von der Uhr teilen» unter Club → Mein Profil ausschaltest.</p>
+
     <h2>Deine Rechte und Kontakt</h2>
     <p>Nach dem Schweizer Datenschutzgesetz (nDSG) und, wo anwendbar, der DSGVO kannst du Auskunft, Berichtigung,
-    Löschung sowie Einschränkung oder Widerspruch verlangen. Bei Daten, für die ein Club verantwortlich ist, antwortet
+    Löschung, eine Kopie deiner Daten in einem übertragbaren Format sowie Einschränkung oder Widerspruch verlangen. Du
+    kannst dich auch beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) oder bei der
+    Datenschutzbehörde deines Wohnorts in der EU beschweren. Bei Daten, für die ein Club verantwortlich ist, antwortet
     der Club; wir unterstützen ihn dabei. E-Mail:
     <a href="mailto:app.support@zhware.org">app.support@zhware.org</a>. Ändert sich der Umgang der App mit Daten, ändert
     sich diese Seite mit, mit neuem Datum.</p>
